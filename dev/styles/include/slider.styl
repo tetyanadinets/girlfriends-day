@@ -1,0 +1,46 @@
+.main-slider
+	overflow hidden
+	position relative
+	margin 50px 0
+	&__item
+		.title
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+
+			color #fff
+		.img
+			display block
+			padding-bottom 60%
+			background-size cover
+	&__arr
+		position absolute
+		z-index 50
+		top 50%
+		transform translateY(-50%)
+		width 40px
+		height 40px
+		background #ccc
+		cursor pointer
+		display flex
+		align-items center
+		justify-content center
+		transition opacity .5s
+		&.swiper-button-disabled 
+			opacity .1
+			cursor default
+		&.arr-prev 
+			left 0
+		&.arr-next
+			right 0
+		.icon
+			height 60%
+			fill #000
+			
+// .swiperProducts
+// 	overflow-x hidden
+// 	position relative
+// 	.arr.arr-prev
+// 	.arr.arr-next
+	

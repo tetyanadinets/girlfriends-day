@@ -1,0 +1,85 @@
+// Fonts mixin
+font-url(file)
+  return '../fonts/' + file
+
+webfont(family, file, weight = 'normal')
+  @font-face
+    font-family family
+    src url(font-url(file + '.woff2')) format('woff2'), 
+        url(font-url(file + '.woff')) format('woff'), 
+        url(font-url(file + '.ttf')) format('truetype')
+    font-weight weight
+    font-style normal
+ 
+
+
+@font-face
+	font-family Quanelas
+	src url(../fonts/Quanelas/Quanelas-Black.eot)
+	src url(../fonts/Quanelas/Quanelas-Black.woff2) format("woff2"), url(../fonts/Quanelas/Quanelas-Black.woff) format("woff"), url(../fonts/Quanelas/Quanelas-Black.ttf) format("truetype"), url(../fonts/Quanelas/Quanelas-Black.eot?#iefix) format("embedded-opentype")
+	font-weight 900
+	font-style normal
+	
+@font-face
+	font-family Quanelas
+	src url(../fonts/Quanelas/Quanelas-Bold.eot)
+	src url(../fonts/Quanelas/Quanelas-Bold.woff2) format("woff2"), url(../fonts/Quanelas/Quanelas-Bold.woff) format("woff"), url(../fonts/Quanelas/Quanelas-Bold.ttf) format("truetype"), url(../fonts/Quanelas/Quanelas-Bold.eot?#iefix) format("embedded-opentype")
+	font-weight 700
+	font-style normal
+	
+@font-face
+	font-family Quanelas
+	src url(../fonts/Quanelas/Quanelas-Medium.eot)
+	src url(../fonts/Quanelas/Quanelas-Medium.woff2) format("woff2"), url(../fonts/Quanelas/Quanelas-Medium.woff) format("woff"), url(../fonts/Quanelas/Quanelas-Medium.ttf) format("truetype"), url(../fonts/Quanelas/Quanelas-Medium.eot?#iefix) format("embedded-opentype")
+	font-weight 500
+	font-style normal
+	
+@font-face
+	font-family Quanelas
+	src url(../fonts/Quanelas/Quanelas-Regular.eot)
+	src url(../fonts/Quanelas/Quanelas-Regular.woff2) format("woff2"), url(../fonts/Quanelas/Quanelas-Regular.woff) format("woff"), url(../fonts/Quanelas/Quanelas-Regular.ttf) format("truetype"), url(../fonts/Quanelas/Quanelas-Regular.eot?#iefix) format("embedded-opentype")
+	font-weight 500
+	font-style normal
+
+// webfont('GothamPro', 'GothamPro/black/GothamPro-Black', weight = 900)
+// webfont('GothamPro', 'GothamPro/blackitalic/GothamPro-BlackItalic', weight = 900)
+// webfont('GothamPro', 'GothamPro/bold/GothamPro-Bold', weight = 700)
+// webfont('GothamPro', 'GothamPro/medium/GothamPro-Medium', weight = 500)
+// webfont('GothamPro', 'GothamPro/regular/GothamPro', weight = 'normal')
+
+
+// @font-face 
+// 	font-family GothamPro
+// 	src url(../fonts/GothamPro-Black/GothamPro-Black.eot)
+// 	src url(../fonts/GothamPro-Black/GothamPro-Black.woff2) format("woff2"), url(../fonts/GothamPro-Black/GothamPro-Black.woff) format("woff"), url(../fonts/GothamPro-Black/GothamPro-Black.ttf) format("truetype"), url(../fonts/GothamPro-Black/GothamPro-Black.eot?#iefix) format("embedded-opentype")
+// 	font-weight 900
+// 	font-style normal
+
+// @font-face 
+// 	font-family GothamPro
+// 	src url(../fonts/GothamPro-Bold/GothamPro-Bold.eot)
+// 	src url(../fonts/GothamPro-Bold/GothamPro-Bold.woff2) format("woff2"), url(../fonts/GothamPro-Bold/GothamPro-Bold.woff) format("woff"), url(../fonts/GothamPro-Bold/GothamPro-Bold.ttf) format("truetype"), url(../fonts/GothamPro-Bold/GothamPro-Bold.eot?#iefix) format("embedded-opentype")
+// 	font-weight 700
+// 	font-style normal
+
+// @font-face 
+// 	font-family GothamPro
+// 	src url(../fonts/GothamPro-Medium/GothamPro-Medium.eot)
+// 	src url(../fonts/GothamPro-Medium/GothamPro-Medium.woff2) format("woff2"), url(../fonts/GothamPro-Medium/GothamPro-Medium.woff) format("woff"), url(../fonts/GothamPro-Medium/GothamPro-Medium.ttf) format("truetype"), url(../fonts/GothamPro-Medium/GothamPro-Medium.eot?#iefix) format("embedded-opentype")
+// 	font-weight 500
+// 	font-style normal
+	
+
+// @font-face 
+// 	font-family GothamPro
+// 	src url(../fonts/GothamPro/GothamPro.eot)
+// 	src url(../fonts/GothamPro/GothamPro.woff2) format("woff2"), url(../fonts/GothamPro/GothamPro.woff) format("woff"), url(../fonts/GothamPro/GothamPro.ttf) format("truetype"), url(../fonts/GothamPro/GothamPro.eot?#iefix) format("embedded-opentype")
+// 	font-weight 400
+// 	font-style normal
+    
+// @font-face
+// 	font-family GothamPro
+// 	src url(../fonts/GothamPro-Light/GothamPro-Light.eot)
+// 	src url(../fonts/GothamPro-Light/GothamPro-Light.woff2) format("woff2"), url(../fonts/GothamPro-Light/GothamPro-Light.woff) format("woff"), url(../fonts/GothamPro-Light/GothamPro-Light.ttf) format("truetype"), url(../fonts/GothamPro-Light/GothamPro-Light.eot?#iefix) format("embedded-opentype")
+// 	font-weight 200
+// 	font-style normal

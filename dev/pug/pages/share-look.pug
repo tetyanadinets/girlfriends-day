@@ -1,0 +1,410 @@
+extends ../main
+
+block variables
+	- var title = 'Страница с готовым образом';
+	- var pageClass = 'finished-lool-page';
+
+block content
+	+b.finished-look-page.share-look-page
+		.share-look-page__top
+			.container
+				.share-look-page__form-outer
+					+b.FORM.share-form
+						+e.section
+							+e.title поділись створеним луком с подругами
+							+e.row
+								.fieldset.form-item.valid
+									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+									.help-block Введіть teлефон
+								.fieldset.form-item.valid
+									+e.INPUT(type="email" name="email" placeholder="Пошта").name
+									.help-block Введіть пошту
+								.fieldset.form-item.valid
+									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+									.help-block Введіть ім'я
+						+e.show-btn + надіслати ще одній подрузі (5)
+						+e.hidden
+							+e.row
+								.fieldset.form-item.valid
+									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+									.help-block Введіть teлефон
+								.fieldset.form-item.valid
+									+e.INPUT(type="email" name="email" placeholder="Пошта").name
+									.help-block Введіть пошту
+								.fieldset.form-item.valid
+									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+									.help-block Введіть ім'я
+							+e.row
+								.fieldset.form-item.valid
+									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+									.help-block Введіть teлефон
+								.fieldset.form-item.valid
+									+e.INPUT(type="email" name="email" placeholder="Пошта").name
+									.help-block Введіть пошту
+								.fieldset.form-item.valid
+									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+									.help-block Введіть ім'я
+							+e.row
+								.fieldset.form-item.valid
+									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+									.help-block Введіть teлефон
+								.fieldset.form-item.valid
+									+e.INPUT(type="email" name="email" placeholder="Пошта").name
+									.help-block Введіть пошту
+								.fieldset.form-item.valid
+									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+									.help-block Введіть ім'я
+							+e.row
+								.fieldset.form-item.valid
+									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+									.help-block Введіть teлефон
+								.fieldset.form-item.valid
+									+e.INPUT(type="email" name="email" placeholder="Пошта").name
+									.help-block Введіть пошту
+								.fieldset.form-item.valid
+									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+									.help-block Введіть ім'я
+							+e.row
+								.fieldset.form-item.valid
+									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+									.help-block Введіть teлефон
+								.fieldset.form-item.valid
+									+e.INPUT(type="email" name="email" placeholder="Пошта").name
+									.help-block Введіть пошту
+								.fieldset.form-item.valid
+									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+									.help-block Введіть ім'я
+						+e.section
+							+e.title поділись створеним луком с подругами
+							+e.row
+								.fieldset.form-item.valid
+									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+									.help-block Введіть teлефон
+								.fieldset.form-item.valid
+									+e.INPUT(type="email" name="email" placeholder="Пошта").name
+									.help-block Введіть пошту
+								.fieldset.form-item.valid
+									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+									.help-block Введіть ім'я
+						+e.section.share-form__section_checkbox
+							+e.title хочу взяти участь у розіграші
+							+e.INPUT(type="checkbox" id="share-checkbox")
+							label(for="share-checkbox")
+								include ../../static/img/svg/checkbox.svg
+						+e.BUTTON.btn Надіслати
+
+
+		.container
+			//- .constructor-page__container
+			+e.inner
+				+e.col-l
+					+b.img-block
+						+b.girl-head.girl-head_mat
+							+e.head-default.girl-head__item
+								include ../../static/img/constructor/golova0.svg
+							+e.head-friz.friz.girl-head__item
+								include ../../static/img/constructor/golova1_Kydri.svg
+							+e.head-curls.girl-head__item.curls.show
+								include ../../static/img/constructor/golova2_Lokonu.svg
+							+e.head-straight.girl-head__item.straight
+								include ../../static/img/constructor/golova3_Pramue.svg		
+						+b.girl-body.girl-body_body-2
+							+e.body-default
+								include ../../static/img/constructor/telo0.svg
+				+e.col-r
+					+e.FORM.form
+						+b.sector
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Форма
+									.btns__wrap
+										.btns__item.active кучеряві
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text1
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair4.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair5.png" alt)
+														a(href="") Інтернет-магазин
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Колір волосся
+									.btns__wrap
+										.btns__item.active блондинка
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text4
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair4.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair5.png" alt)
+														a(href="") Інтернет-магазин
+						+b.sector
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Основа макіяжу
+									.btns__wrap
+										.btns__item.active основа під макіяж + тональний крем
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text8
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/skin1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/skin2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/skin3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/skin2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/skin1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/skin3.png" alt)
+														a(href="") Інтернет-магазин
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Очі
+									.btns__wrap
+										.btns__item.active нюдовий макіяж
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text11
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/brows1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows4.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows3.png" alt)
+														a(href="") Інтернет-магазин
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Брови
+									.btns__wrap
+										.btns__item.active туш для брів
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text15
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/brows1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows4.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows1.png" alt)
+														a(href="") Інтернет-магазин
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Скули
+									.btns__wrap
+										.btns__item.active рум'яна
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text18
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/brows1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows4.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/brows1.png" alt)
+														a(href="") Інтернет-магазин
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Губи
+									.btns__wrap
+										.btns__item.active матовий
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text21
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/lips1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/lips2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/lips3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/lips2.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/lips3.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/lips1.png" alt)
+														a(href="") Інтернет-магазин
+						+b.sector
+							+e.tab-outer
+								+e.btns.btns
+									.btns__title Твій аромат
+									.btns__wrap
+										.btns__item.active цитрусова свіжість
+										.bar-code
+											img(src="img/lorem/barcode.png")
+								+e.content
+									+b.products.constructor-page__products.switch-text24
+										+e.hide
+										+e.items-outer
+											+e.items-scroll
+												+e.item.active
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+												+e.item
+													+e.item-body
+														img(src="img/lorem/hair1.png" alt)
+														a(href="") Інтернет-магазин
+			+b.bottom-btn
+				+e.A(href='').link Спробуй створити свій образ
+
+	

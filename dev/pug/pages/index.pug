@@ -1,0 +1,29 @@
+extends ../main
+
+block variables
+	- var title = 'Главная страница';
+	- var pageClass = 'home-page';
+
+block content
+	+b.container(style='margin-top: 150px; position: relative; z-index: 4;')
+		//- h1 Hello developer!
+		//- +e.content
+		//- 	+form()
+		//- +e.content
+		//- 	+slider()
+		//- +e.content
+		//- 	.btn-wrap
+		//- 		a(href="#examplepopup").btn.popupBtn open popup
+		//- 	+popup()
+		
+		h1 Карта сайта
+		ul.s-map-list
+			li: a(href="home.html") 1. Главная
+			li: a(href="#popupCode").popupBtn 2. Попап код подтверждения
+			li: a(href="message.html") 3. Сообщение об отправке
+			li: a(href="constructor.html") 4. Конструктор
+			li: a(href="finished-look.html") 5. Страница с готовым образом
+			li: a(href="share-look.html") 6. Страница поделись с подругами
+
+
+

@@ -1,0 +1,593 @@
+.constructor-page
+	position relative
+	z-index 11
+	padding-top 130px
+	// height 100vh
+	// overflow hidden
+	&:after 
+			content ''
+			display block
+			position absolute
+			width 300px
+			height 350px
+			background url('../img/lorem/grid.png') no-repeat center center
+			background-size cover
+			right 0
+			top -30px
+			z-index -1
+			+mw(1100px)
+				top -190px
+			+mw(768px)
+				width 250px
+				height 280px
+				top -120px
+			+mw(480px)
+				width 170px
+				height 190px
+				top -90px
+		&:before
+			content ''
+			display block
+			position absolute
+			width 300px
+			height 350px
+			background url('../img/lorem/grid.png') no-repeat center center
+			background-size cover
+			left 0
+			bottom -30px
+			z-index -1
+			+mw(1100px)
+				top -190px
+			+mw(768px)
+				width 250px
+				height 280px
+				top -120px
+			+mw(480px)
+				width 170px
+				height 190px
+				top -90px
+	&__inner
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		align-items flex-start
+		height 100%
+		overflow auto
+		// padding-bottom 300px
+		&::-webkit-scrollbar
+			opacity 0
+		&::-webkit-scrollbar-thumb
+			opacity 0
+	&__form
+		padding-bottom 150px
+		&::-webkit-scrollbar
+			opacity 0
+		&::-webkit-scrollbar-thumb
+			opacity 0
+	&__container
+		position relative
+		height 100vh
+		overflow hidden
+	&__col-l
+		width 45%
+		height 100%
+		position absolute
+		left 0
+		right 0
+		z-index 1
+	&__col-r
+		width 100%
+		height 100%
+		overflow auto
+		position relative
+		z-index 9
+		padding-left 50%
+		&::-webkit-scrollbar
+			opacity 0
+		&::-webkit-scrollbar-thumb
+			opacity 0
+	&__content
+		position relative
+		overflow hidden
+	
+.sector
+	margin-bottom 40px	
+	&__title
+		color #FF8835
+		font 500 18px/1 'Quanelas', Helvetica, sans-serif
+		text-align center
+		margin-bottom 45px
+		
+.btns
+	margin-bottom 15px
+	&__wrap
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		justify-content baseline
+		flex-wrap wrap
+	&__title
+		margin-bottom 30px
+		color #000
+		font 500 16px/1 'Quanelas', Helvetica, sans-serif
+	&__item
+		btn-tab()
+		padding 0 5px
+		margin-right 20px
+		margin-bottom 20px
+		text-align center
+		display flex
+		justify-content center
+		align-items center
+		&.active
+			background linear-gradient(180deg, #FF6D56 0%, #FF8835 100%)
+			box-shadow 0px 6px 20px rgba(51, 51, 51, 0.15)
+			color #fff
+		
+.products
+	height 100%
+	position absolute
+	left 0
+	top 0
+	z-index 0
+	opacity 0
+	visibility hidden
+	&.current
+		opacity 1
+		visibility visible
+		z-index 1
+		position relative
+		transition all .3s ease-in
+	&__items-outer
+		white-space nowrap
+		overflow-x hidden
+		padding-bottom 30px
+	&__items-scroll
+		overflow-x auto
+		padding-bottom 30px
+		&::-webkit-scrollbar
+			height 3px
+			background-color rgba(176, 176, 176, .5)
+			border-radius 3px
+			cursor pointer
+		&::-webkit-scrollbar-thumb
+			background-color #000
+			border-radius 3px
+			cursor pointer
+			
+	&__item
+		display inline-block
+		margin 0 5px
+		background-color #fff
+		border 3px solid transparent
+		border-radius 12px
+		transition all .3s ease
+		&:hover
+			border-color #FF8539
+			.products__item-body
+				border-color transparent
+				a
+					opacity 1
+					transform translateY(0)
+		&.active
+			border-color #FF8539
+			.products__item-body
+				a
+					opacity 1
+					transform translateY(0)
+		&:first-child
+			margin-left 0
+		&:last-child
+			margin-right 0
+	&__item-body
+		box-style()
+		display inline-block
+		text-decoration none
+		transition all .3s ease
+		position relative
+		a
+			cursor pointer
+			width calc(100% + 8px)
+			display inline-block
+			background-color #FF8539
+			position absolute
+			bottom -20px
+			left -4px
+			color #fff
+			border-radius 0px 0px 8px 8px
+			font 700 14px/1 'Quanelas', Helvetica, sans-serif
+			text-align center
+			padding 6px 0
+			opacity 0
+			transform translateY(-100%)
+			transition all .3s ease
+		img
+			height 100%
+			width auto
+		
+.bottom-btns
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content flex-start
+	align-items center
+	margin-bottom 40px
+	&__btn-clear
+		btn-tab()
+		color #FF7B46
+		margin-right 20px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		align-items center
+	&__btn-save
+		btn()
+		width 170px
+		text-transform none
+		margin-right 20px
+	&__btn-done
+		btn()
+		width 170px
+		text-transform none
+		
+.img-block
+	position absolute
+	// left 50%
+	// top 50%
+	// transform translate(-50%, -50%)
+	width 100%
+	height 100%
+	svg
+		width 670px
+		height 80vh
+	
+.girl-body
+	position absolute
+	width 100%
+	height 100%
+	svg
+		.body-4
+			opacity 0
+		.body-3
+			opacity 0
+		.body-2
+			opacity 0
+		.body-1
+			opacity 0
+		.body-0
+			opacity 1
+	&_body-4
+		svg
+			.body-0
+				opacity 0
+			.body-4
+				opacity 1
+	&_body-3
+		svg
+			.body-0
+				opacity 0
+			.body-3
+				opacity 1
+	&_body-2
+		svg
+			.body-0
+				opacity 0
+			.body-2
+				opacity 1
+	&_body-1
+		svg
+			.body-0
+				opacity 0
+			.body-1
+				opacity 1
+	&_body-0
+		svg
+			.body-0
+				opacity 1
+			
+	
+		
+.girl-head
+	transition opacity .3s ease-in
+	position absolute
+	top 0
+	left 0
+	height 100%
+	width 100%
+	z-index 5
+	&_brown
+		.girl-head__head-friz
+			svg
+				position relative
+				z-index 6
+				.friz-default-main
+					fill #593625
+				.friz-default-light
+					fill #7F5344
+		.girl-head__head-straight
+			svg
+				position relative
+				z-index 6
+				.straight-default
+					fill #4C2900
+		.girl-head__head-curls
+			svg
+				position relative
+				z-index 6
+				.curl-default
+					fill #562900
+	&_black
+		.girl-head__head-friz
+			svg
+				position relative
+				z-index 6
+				.friz-default-main
+					fill #2D2D2D
+				.friz-default-light
+					fill #211A12
+		.girl-head__head-straight
+			svg
+				position relative
+				z-index 6
+				.straight-default
+					fill #020100
+		.girl-head__head-curls
+			svg
+				position relative
+				z-index 6
+				.curl-default
+					fill #31261A
+	&_blond
+		.girl-head__head-friz
+			svg
+				position relative
+				z-index 6
+				.friz-default-main
+					fill #F7AF59
+				.friz-default-light
+					fill #D69247
+		.girl-head__head-straight
+			svg
+				position relative
+				z-index 6
+				.straight-default
+					fill #E8BE6B
+		.girl-head__head-curls
+			svg
+				position relative
+				z-index 6
+				.curl-default
+					fill #DBA56A
+	&_red
+		.girl-head__head-friz
+			svg
+				position relative
+				z-index 6
+				.friz-default-main
+					fill #AB2C0C
+				.friz-default-light
+					fill #D6593E
+		.girl-head__head-straight
+			svg
+				position relative
+				z-index 6
+				.straight-default
+					fill #A8341D
+		.girl-head__head-curls
+			svg
+				position relative
+				z-index 6
+				.curl-default
+					fill #AF2F1B
+	&_mat
+		.girl-head__head-friz
+			svg
+			.friz-lips-mat
+				opacity 1
+		.girl-head__head-straight
+			svg
+				.straight-lips-mat
+					opacity 1
+		.girl-head__head-curls
+			svg
+				.curl-lips-mat
+					opacity 1
+	&_glanetc
+		.girl-head__head-friz
+			svg
+			.friz-lips-glanetc
+				opacity 1
+		.girl-head__head-straight
+			svg
+				.straight-lips-glanetc
+					opacity 1
+		.girl-head__head-curls
+			svg
+				.curl-lips-glanetc
+					opacity 1
+	&_glitter
+		.girl-head__head-friz
+			svg
+			.friz-lips-glitter
+				opacity 1
+		.girl-head__head-straight
+			svg
+				.straight-lips-glitter
+					opacity 1
+		.girl-head__head-curls
+			svg
+				.curl-lips-glitter
+					opacity 1
+		
+				
+	&__item
+		position absolute
+		left 0
+		top 0
+		height 100%
+		width 100%
+		// svg
+		// 	width 670px
+		// 	height 750px
+	&__head-friz
+		opacity 0
+	&__head-straight
+		opacity 0
+	&__head-curls
+		opacity 0
+	&__head-default
+		opacity 0
+		
+.show
+	opacity 1
+.hide
+	opacity 0
+	
+// == HAIR COLORS ==
+
+// SVG CURLS
+
+.friz-default-main
+	fill #CCC0B1
+.friz-default-light
+	fill #AB9E90
+	
+.friz-black-darck
+	fill #2D2D2D
+.friz-black-light
+	fill #211A12
+	
+.friz-blond-main
+	fill #F7AF59
+.friz-blond-dark
+	fill #D69247
+	
+.friz-brown-dark
+	fill #593625
+.friz-brown-light
+	fill #7F5344
+	
+.friz-red-dark
+	fill #AB2C0C
+.friz-red-light
+	fill #D6593E
+	
+// SVG FRIZ
+
+.curl-default
+	fill #7C7169
+
+.curl-black
+	fill #31261A
+
+.curl-blond
+	fill #DBA56A
+
+.curl-brown
+	fill #562900
+
+.curl-red
+	fill #AF2F1B
+	
+// SVG STRAIGHT
+
+.straight-default
+	fill #B2A69E
+
+.straight-black
+	fill #020100
+	
+.straight-blond
+	fill #E8BE6B
+	
+.straight-brown
+	fill #4C2900
+	
+.straight-red
+	fill #A8341D
+	
+// == LIPS COLORS ==
+
+// SVG FRIZ
+
+.friz-lips-glitter
+	opacity 0
+	
+.friz-lips-glanetc
+	opacity 0
+
+.friz-lips-mat
+	opacity 0
+	
+// SVG CURLS
+
+.curl-lips-glitter
+	opacity 0
+	
+.curl-lips-glanetc
+	opacity 0
+
+.curl-lips-mat
+	opacity 0
+	
+// SVG STRAIGHT
+
+.straight-lips-glitter
+	opacity 0
+	
+.straight-lips-glanetc
+	opacity 0
+
+.straight-lips-mat
+	opacity 0
+	
+// BODY
+
+// STRAIGHT
+.body-straight-4
+	opacity 0
+.body-straight-3
+	opacity 0
+.body-straight-2
+	opacity 0
+.body-straight-1
+	opacity 0
+.body-straight-0
+	opacity 0
+
+// CURL
+
+.body-curl-4
+	opacity 0
+.body-curl-3
+	opacity 0
+.body-curl-2
+	opacity 0
+.body-curl-1
+	opacity 0
+.body-curl-0
+	opacity 0
+
+// FRIZ
+
+.body-friz-4
+	opacity 0
+.body-friz-3
+	opacity 0
+.body-friz-2
+	opacity 0
+.body-friz-1
+	opacity 0
+.body-friz-0
+	opacity 0

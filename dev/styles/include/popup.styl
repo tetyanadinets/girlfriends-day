@@ -1,0 +1,182 @@
+body.hidden
+	overflow hidden
+	.popup
+		display block
+.popup.show_popup
+	visibility visible
+	opacity 1
+
+.popup
+	position fixed
+	z-index 1100
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background rgba(#000, .5)
+	opacity 0
+	display none
+	visibility hidden
+	transition .5s
+	.close 
+		position absolute
+		top 2px
+		right 15px
+		font-size 30px
+		color #000
+		cursor pointer
+		width 15px
+		height 15px
+		transition all .3s aese-in
+		&:hover
+			svg
+				fill #fff
+			&:before
+				opacity 1
+		svg
+			width 100%
+			height 100%
+			position absolute
+			right -8px
+			top 5px
+			z-index 2
+			fill #FF8539
+			transition all .3s aese-in
+		&:before
+			content ''
+			position absolute
+			display block
+			top -2px
+			right -15px
+			width 30px
+			height 30px
+			background-color #FF8539
+			z-index 1
+			opacity 0
+			transition opacity .3s aese-in
+	&__content
+		position absolute
+		top 20%
+		left 50%
+		width 770px
+		max-width 100%
+		min-height 320px
+		display flex
+		align-items center
+		justify-content center
+		flex-direction column
+		transform translateX(-50%)
+		padding 50px 80px
+		background #ececec
+		text-align center
+		
+
+.popupCode
+	.popup__container
+		width 500px
+		background-color #fff
+		position absolute
+		left 50%
+		top 30%
+		transform translateX(-50%)
+		padding 55px
+		
+.popup-code
+	text-align center
+	&__title
+		color #212121
+		font-size 15px
+		line-height 20px
+		font-weight 700
+		font-family 'GothamPro'	
+	&__form
+		.form__fieldset
+			span
+				color #FF3200
+				font-size 12px
+				display block
+				transition all .3s ease-in
+				opacity 0
+				margin-top 5px
+			&.error
+				input 
+					color #FF3200
+					border-color #FF3200
+				span
+					opacity 1
+	&__code
+		background-color #fff
+		height 55px
+		border-radius 55px
+		border 1px solid #ff8835
+		padding 15px
+		text-align center
+		max-width 350px
+		margin 35px auto 0
+	&__repeat
+		display inline-block
+		margin-top 12px
+		color #858585
+		font-size 12px
+		font-family 'GothamPro'
+		text-decoration underline
+		cursor pointer
+		transition all .3s ease-in
+		&:hover
+			text-decoration none
+	&__confirm
+		btn()
+		border none
+		min-width 170px
+		margin-top 26px
+	&__checkbox
+		margin-top 30px
+		input
+			display inline-block
+			vertical-align middle
+			opacity 0
+			position absolute
+			z-index -1
+			left 0
+			&:checked + label:after {
+				opacity 1
+			}
+		label
+			font-size 14px
+			display inline-block
+			vertical-align middle
+			position relative
+			cursor pointer
+			padding-right 15px
+			transition color .3s ease
+			&:before
+				content ''
+				position absolute
+				display block
+				top 3px
+				right 0
+				width 10px
+				height 10px
+				background-color #fff
+				border 1px solid #000
+				border-radius 2px
+			&:after
+				content ''
+				display block
+				position absolute
+				right 0
+				top -1px
+				width 10px
+				height 10px
+				border-left 2px solid #ff8835
+				border-bottom 2px solid #ff8835
+				transform rotate(-45deg)
+				transition .3s
+				opacity 0
+		&:hover
+			label
+				color #f58220
+		
+			
+
+	

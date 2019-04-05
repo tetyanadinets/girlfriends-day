@@ -1,0 +1,13 @@
+extends ../main
+
+block variables
+	- var title = 'Страница сообщения';
+	- var pageClass = 'message-page';
+
+block content
+	+b.message-page
+		.container
+			+e.title Відправлено, дякуємо за участь
+			+e.img
+				include ../../static/img/svg/message.svg
+			+e.A(href="/home.html").link повернутись на головну сторінку

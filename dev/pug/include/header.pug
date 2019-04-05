@@ -1,0 +1,82 @@
+mixin header(data)
+	+b.HEADER.header#header
+		+e.container
+			a.logo(href="/"): img(src="img/svg/logo.svg", alt="logo")
+		
+			.isDesctop
+				+e.NAV.nav.headerNav
+					ul
+						li: a.navBtn.scroll(href="#rules") як виграти
+						li: a.navBtn.scroll(href="#prisec") Призи
+						li: a.navBtn.scroll(href="#partners") Партнери
+						li: button.navBtn.menu-item-has-children(data-projects-desc) Проекти
+
+			+b.progects.navPopup#progectsPopup
+				.container
+					+e.wrap
+						+e.A.item(href="")
+							.img(style="background-image:url(img/lorem/article1.jpg)")
+							span.text EVA Woman Challenge
+						+e.A.item(href="")
+							.img(style="background-image:url(img/lorem/article2.jpg)")
+							span.text Програма лояльності<br> "Мозаїка"
+						+e.A.item(href="")
+							.img(style="background-image:url(img/lorem/article3.jpg)")
+							span.text  EVA Academy
+						+e.A.item(href="")
+							.img(style="background-image:url(img/lorem/article4.jpg)")
+							img.decor(src="img/decor.png", alt="")
+							span.text Блог Beauty & Care
+						+e.A.item(href="")
+							.img(style="background-image:url(img/lorem/article5.jpg)")
+							span.text Благотворительность
+						+e.A.item(href="")
+							.img(style="background-image:url(img/lorem/article6.jpg)")
+							span.text  Мама года
+					+e.A.logo(href=""): img(src="img/svg/logo.svg", alt="eva")
+
+			.hamburger#hamburger
+				span
+
+		//- .hamburger#hamburger
+		//- 	span
+
+		//- мобильный хедер
+		.isMobile
+
+			+b.hidden-header
+				+e.A.logo(href=""): img(src="img/svg/logo.svg", alt="eva")
+				+e.top
+					+e.NAV.nav
+						ul
+							li: a(href="#rules") як виграти
+							li: a(href="#prisec") Призи
+							li: a(href="#partners") Партнери
+
+				+e.bottom
+					+e.NAV.nav
+						ul
+							li.menu-item-has-children
+								span(data-projects-mob) Проекти EVA
+								ul
+									li: a(href="") EVA Woman Challenge
+									li: a(href="") Програма лояльності  "Мозаїка"
+									li: a(href="") EVA Academy
+									li: a(href="") Блог Beauty & Care
+									li: a(href="") Благодійність
+									li: a(href="") Мама року
+							li: a(href="") EVA.UA
+				
+
+					+e.UL.sosial.sosial
+						a(href='').sosial__item.sosial__item_fb
+							include ../../static/img/svg/icons/fb.svg
+						a(href='').sosial__item.sosial__item_youtube
+							include ../../static/img/svg/icons/youtube.svg
+						a(href='').sosial__item.sosial__item_twit
+							include ../../static/img/svg/icons/twit.svg
+						a(href='').sosial__item.sosial__item_viber
+							include ../../static/img/svg/icons/viber.svg
+						a(href='').sosial__item.sosial__item_insta
+							include ../../static/img/svg/icons/insta.svg
+

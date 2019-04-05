@@ -1,0 +1,473 @@
+.header
+	position absolute
+	z-index 1000
+	top 0
+	left 0
+	right 0
+	margin-bottom 20px
+	width 100%
+	// background rgba(255, 255, 255, .7)
+	background-color #fff
+	font-family 'Roboto Condensed', sans-serif
+	transition all .5s ease-in
+	// &.fixed
+	// 	position fixed
+	// 	transition all .5s ease-in	
+	// 	&_hide
+	// 		transform translateY(-100%)
+	// 		transition all .5s ease-in
+	// 		&:hover
+	// 			transform translateY(0)
+	&__container
+		// max-width 1230px
+		width 86%
+		height 70px
+		margin 0 auto
+		padding 0 15px
+		display flex
+		align-items center
+		justify-content space-between
+		+mw(1100px)
+				max-width 800px	
+		.logo
+			width 318px
+		.perfect
+			width 140px
+			margin-left 25px
+			padding-left 20px
+			border-left 1px solid #cccccc
+	&__nav
+		margin 0 10px
+		display flex
+		ul
+			width 100%
+			display flex
+		li
+			display inline-block
+			margin 0 15px
+			
+.headerNav
+	.navBtn
+		text-decoration none
+		color $colorMain
+		text-transform uppercase
+		font 400 18px/1 'Quanelas', Arial, Helvetica, sans-serif
+		transition color .5s ease
+		background-color transparent
+		border none
+		cursor pointer
+		&:hover
+			color $black
+		&.active
+			text-decoration none
+			color #f57b0a
+		&.menu-item-has-children
+			position relative
+			padding-right 20px
+			&:after
+				content ''
+				position absolute
+				right 0
+				top 0
+				width 12px
+				height 12px
+				margin-left 8px
+				-webkit-transition -webkit-transform 0.3s
+				transition -webkit-transform 0.3s
+				-o-transition transform 0.3s
+				transition transform 0.3s
+				transition transform 0.3s, -webkit-transform 0.3s
+				-webkit-transform rotate(-45deg)
+				-ms-transform rotate(-45deg)
+				transform rotate(-45deg)
+				border-left 2px solid #f60
+				border-bottom 2px solid #f60
+				pointer-events none
+			&.active
+				&:after
+					transform rotate(135deg)
+					top 5px
+					
+
+
+// progects
+.progects
+	position absolute
+	z-index 100
+	top 70px
+	left 0
+	width 100%
+	padding-bottom 30px
+	background #fff
+	box-shadow 0px 10px 20px 0px rgba(0, 0, 0, 0.1)
+	opacity 0
+	transform translateY(-100px)
+	visibility hidden
+	pointer-events none
+	transition opacity .5s, transform .5s, visibility .5s
+	&.open
+		opacity 1
+		transform none
+		visibility visible
+		pointer-events auto
+	&__wrap
+		margin-top 20px
+		margin-bottom 20px
+		display flex
+		align-items center
+		justify-content space-between
+	&__item
+		position relative
+		width 190px
+		height 190px
+		display flex
+		align-items center
+		justify-content center
+		color #fff
+		font-size 13px
+		font-weight bold
+		text-align center
+		text-transform uppercase
+		text-decoration none
+		background #80ce57
+		transition background 1.2s
+		&:nth-child(2)
+			background #f58220
+		&:nth-child(3)
+			background #3ec8ac
+		&:nth-child(4)
+			background #80c3d2
+		&:nth-child(5)
+			background #df98b9
+		&:nth-child(6)
+			background #ff866f
+		&:hover
+			background transparent
+			.img
+				opacity 1
+				transition opacity 1.2s 	
+		.img
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			bg()
+			opacity 0
+			transition opacity 3s 
+			// transition-delay .5s
+			&:before 
+				content ''
+				position absolute
+				top 0
+				left 0
+				width 100%
+				height 100%
+				background rgba(#000, .4)
+		.text
+			position relative
+			z-index 2
+		.decor
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%,-50%)
+	&__logo
+		display block
+		width 220px
+		margin 0 auto
+	&__perfect
+		color #afce4d
+		font-size 15px
+		font-weight bold
+		text-decoration none
+		flex-shrink 0
+		.icon 
+			width 18px
+			height 35px
+			fill #afce4d
+			margin-right 5px
+	
+.mobile-perfect.header__perfect
+	display none
+	span
+		font-size .8em
+			
+// animate
+.header__container
+	transition height .3s 
+.scroll
+	.header__container
+		height 65px		
+		
+.openNav
+	.header__nav
+		transform none		
+	.hamburger
+		z-index 10
+		span
+			display none
+		&:before, &:after	
+			top 46%
+		&:before
+			transform rotate(45deg)
+		&:after
+			transform rotate(-45deg)		
+
+
+// === header mobile	
+	
+.hamburger
+	position relative
+	display inline-block
+	vertical-align middle
+	cursor pointer
+	padding 3px
+	position relative
+	width 30px
+	height 27px
+	margin-left 20px
+	display none
+	&:before, &:after
+		content ""
+		position absolute
+		left 0
+		width 100%
+		height 5px
+		background #ff8835
+		transition .3s
+	&:before
+		top 0
+	&:after
+		bottom 0	
+		
+	span
+		position absolute
+		top 11px
+		left 0
+		width 100%
+		height 5px
+		background-color #ff8835
+		transition background .3s
+		transition-delay .3s
+		
+.hidden-header
+	position absolute
+	z-index 2
+	top 0
+	left 0
+	width 100%
+	height 100vh
+	padding-top 80px
+	background #fafafa	
+	overflow auto
+	display none
+	&__top
+		padding 20px 15px 0
+		font-size 16px
+		color #666666
+		background #fff
+		text-align center
+		border-bottom 1px solid $borderc
+	&__bottom
+		padding 0 15px 35px
+		font-size 13px
+		color #7a5166
+		background #fafafa		
+	.menu-item-has-children
+		span
+			position relative
+			&:after
+				content ''
+				display block
+				position absolute
+				right 5px
+				top 10px
+				-webkit-transition -webkit-transform 0.3s
+				transition -webkit-transform 0.3s
+				-o-transition transform 0.3s
+				transition transform 0.3s
+				transition transform 0.3s, -webkit-transform 0.3s
+				width 12px
+				height 12px
+				margin-left 8px
+				-webkit-transform rotate(-45deg)
+				-ms-transform rotate(-45deg)
+				transform rotate(-45deg)
+				border-left 2px solid #f60
+				border-bottom 2px solid #f60
+				pointer-events none
+			&.active
+				&:after
+					transform: rotate(135deg);
+	.sosial
+		&__item
+			svg
+				fill #ff8835
+	&__logo
+		text-align center
+		margin 50px auto
+		display block
+		+mw(480px)
+			max-width 200px
+			margin 60px auto 30px
+				
+.openNav .hidden-header
+	display block
+
+	&__form 
+		border-bottom 1px solid $borderc
+		form 
+			position relative
+			width 100%
+			height 40px
+			margin-bottom 20px
+			
+		[type="text"]
+			height 100%
+			padding 0 40px 0 15px
+			color #7a5166
+			font-size 13px
+			border 1px solid $border
+		[type="submit"]
+			position absolute
+			top 50%
+			right 18px
+			width 22px 
+			height 22px
+			margin-top -11px
+			padding 0
+			background none
+			border 0
+			.icon
+				width 100%
+				height 100%
+				fill $color2
+	&__nav
+		li
+			border-bottom 1px solid $borderc
+			&:last-child
+				border-bottom 0
+		a, span
+			display block
+			text-decoration none
+			font-size inherit
+			color inherit
+			height 40px
+			line-height 40px
+			text-transform uppercase
+			&.mobile-mozaika
+				color $color2
+				font-weight bold
+
+			&:active
+				background-color #fff3f9
+		.menu-item-has-children, .item-language-main
+			expand() 
+			&.open:after 
+				transform rotate(135deg)
+			&:after
+				position absolute
+				right 5px
+				top 10px
+				transition transform .3s
+			ul
+				display none
+				padding 0 10px
+				position static
+	&__h-line
+		margin-bottom 30px
+		text-transform uppercase
+		a
+			font-size 15px
+			color $color2
+			font-weight bold
+			text-decoration none
+
+	&__social
+		text-align center
+		a
+			display inline-block
+			width 29px	
+			height 29px
+			margin 0 14px
+			text-decoration none
+			color #7a5166
+			&:first-child
+				margin-left 0
+			&:active .icon
+				fill $hover
+		.icon
+			fill #7a5166
+			width 100%
+			height 100%
+	
+				
+// animate
+.openNav	
+	.hamburger
+		z-index 10
+		span
+			transform scale(0, 1)
+		&:before, &:after	
+			top 46%
+		&:before
+			transform rotate(45deg)
+		&:after
+			transform rotate(-45deg)		
+			
+
+// == media
+@media $lg
+	.header-top__logo
+		margin-right 3%
+
++mw(1100px)
+	.header
+		position fixed
+		top 0
+		left 0
+		width 100%
+		margin 0
+		z-index 900
+
++mw(600px)
+	.header-top-m
+		height 60px
+	.logo-eva-m
+		width 40px
+	.logo-m
+		width 95px
+	.hamburger
+		width 25px
+		height 20px
+	.hidden-header
+		padding-top 60px
+	
+	
+// media
+@media (max-width 1100px)
+	.header__container
+		height 65px
+	.desctop-perfect.header__perfect
+		display none
+	.mobile-perfect.header__perfect
+		display block
+
+	.hamburger
+		display block
+		flex-shrink 0
+		
+@media (max-width 600px)
+	.header__left .logo
+		width 110px
+	.header__left .perfect
+		width 80px
+		margin-left 10px
+		padding-left 10px
+	.hamburger
+		width 35px
+		height 27px
+		margin-left 10px
+	.header__nav a
+		font-size 22px

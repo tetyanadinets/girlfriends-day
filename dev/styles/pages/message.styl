@@ -1,0 +1,46 @@
+.message-page
+	text-align center
+	&__title
+		font normal 48px/50px 'Quanelas', Arial, Helvetica, sans-serif
+		text-transform uppercase
+		text-align center
+		color #FF8835
+		margin-top 115px
+		+mw(1100px)
+			font-size 36px
+		+mw(480px)
+			font-size 30px
+			max-width 250px
+			margin 115px auto 0
+	&__img
+		margin 40px auto
+		text-align center
+		+mw(480px)
+			max-width 250px
+	&__link
+		btn()
+		margin-top 50px
+		display inline-block
+		padding 20px
+		+mw(480px)
+			margin-top 30px
+			height auto
+		
+
+.star1, .star5
+	animation star 2s infinite ease-in-out
+.star2,.star4
+	animation star 2s infinite ease-in-out 1s
+.star3, .star6
+	animation star 2s infinite ease-in-out .5s
+
+@keyframes star
+	0%
+		opacity 0
+	50%
+		opacity 1
+	100%
+		opacity 0
+
+		
+	

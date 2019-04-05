@@ -1,0 +1,16 @@
+mixin popup(data)
+
+	+b.popup.popupCode#popupCode
+		+e.container
+			.close: +icon('close')
+			+b.popup-code
+				+e.H2.title На ваш номер телефону відправлено смс з кодом. Введіть код з смс для підтвердження реєстрації
+				+e.FORM.form
+					.form__fieldset.valid
+						+e.INPUT(type="text" name="a-code" placeholder="XX XX XX").code
+						span Неправильний код
+					+e.A(href="").repeat Надіслати повторно через 60 сек
+					+e.checkbox
+						+e.INPUT(type="checkbox" id="code-checkbox").input-check 
+						+e.label(for="code-checkbox").label-check Погоджуюсь з офіційними правилами акції
+					+e.BUTTON.confirm Підтвердити

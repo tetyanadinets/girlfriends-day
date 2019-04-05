@@ -1,0 +1,113 @@
+.footer
+	flex 0 0 auto
+	min-height 800px
+	position relative
+	padding-top 530px
+	margin-top -105px
+	+mw(1100px)
+		min-height auto
+		padding-top 480px
+		padding-bottom 50px
+	+mw(480px)
+		padding-top 330px
+		padding-bottom 0
+	&:before
+		content ''
+		position absolute
+		display block
+		bottom 0
+		left 0
+		width 100%
+		height 100%
+		background url("../img/lorem/footbg.png") no-repeat top right
+		background-size cover
+		+mw(1980px)
+			width 100%
+			height 980px
+		+mw(1780px)
+			width 100%
+			height 950px
+		+mw(1680px)
+			width 100%
+			height 900px
+		+mw(1100px)
+			height 760px
+	&__inner
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		align-items flex-start
+		position relative
+		&_bot
+			margin-top 95px
+			align-items baseline
+			+mw(480px)
+				margin-top 30px
+		+mw(480px)
+			display block
+	&__col
+		width 300px
+		text-align left
+		+mw(480px)
+			width 100%
+			text-align center
+			margin-bottom 20px
+
+			
+	&__title
+		text-transform uppercase
+		font 700 16px/1 'Quanelas', Arial, Helvetica, sans-serif
+		padding-bottom 7px
+		border-bottom 1px solid #000
+		margin-bottom 7px
+		color #000
+	&__info
+		font 500 16px/20px 'Quanelas', Arial, Helvetica, sans-serif
+		color inherit
+		text-decoration none
+		display block
+		&_link
+			transition opacity .3s ease
+			&:hover
+				opacity .7
+		span
+			margin-left 5px
+		
+.sosial
+	text-align center
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	align-items baseline
+	justify-content space-between
+	max-width 225px
+	margin auto
+	&__item
+		text-decoration none
+		width 25px
+		height 25px
+		transition opacity .3s ease
+		&:hover
+			opacity .7
+		svg
+			fill #333333
+		// &_fb
+		// 	background url("../img/svg/icons/fb.svg") no-repeat center center
+		// 	background-size contain
+		// &_youtube
+		// 	background url("../img/svg/icons/youtube.svg") no-repeat center center
+		// 	background-size contain
+		// &_twit
+		// 	background url("../img/svg/icons/twit.svg") no-repeat center center
+		// 	background-size contain
+		// &_viber
+		// 	background url("../img/svg/icons/viber.svg") no-repeat center center
+		// 	background-size contain
+		// &_insta
+		// 	background url("../img/svg/icons/insta.svg") no-repeat center center
+		// 	background-size contain

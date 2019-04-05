@@ -1,0 +1,283 @@
+
+// plaseholders
+input::-webkit-input-placeholder
+	color #212121
+input::-moz-placeholder
+	color #212121
+input:-moz-placeholder
+	color #212121
+input:-ms-input-placeholder
+	color #212121
+textarea::-webkit-input-placeholder
+	color: #00a0d3
+	opacity .5
+textarea::-moz-placeholder
+	color #00a0d3
+	opacity .5
+textarea:-moz-placeholder
+	color: #00a0d3
+	opacity .5
+textarea:-ms-input-placeholder
+	color #00a0d3
+	opacity .5
+
+	
+input:not([type="checkbox"]):not([type="radio"]), textarea
+	display block
+	// width 100%
+textarea 
+	resize none
+
+.send-form, .webform-client-form
+	position relative
+	font-size 20px
+	color $color
+.form-group
+		margin-bottom 2em
+		padding 0
+		border 0
+		&:after
+			content ''
+			display table
+			clear both
+			
+.form-half
+		float left
+		width 50%
+		&:nth-child(odd) 
+			padding-right:3em
+		&:nth-child(even)
+			padding-left:3em
+
+	.dates
+		> .title 
+			margin-bottom 2em
+.form-inline-group
+		display flex
+		.send-form__item
+			width 120px
+			margin-right 2em
+			&:last-child
+				margin 0
+
+.form
+	.error-text
+		position absolute
+		top calc(100% + 4px)
+		left 0
+		font-size 12px
+		color #cd5a5b
+		display none
+		opacity 0
+		visibility hidden
+
+.form-item
+	position relative
+	margin-bottom 1em
+	padding-top .4em
+	&.active label
+		transform translateY(-1.6em) scale(0.85)
+		transform-origin 0 0
+	&:afte
+		content ''
+		position absolute
+		top 0
+		right 0
+		width 1.1em
+		height 1.1em
+		background url(../img/icons/png/err.png) center center
+		background-size 100% 100%
+		transitionopacity .5s
+		opacity 0
+	&.select
+		&:before
+			content ''
+			position  absolute
+			right  0
+			bottom 1em
+			width  1em
+			height  1em
+			border-bottom  1px solid $cc
+			border-left  1px solid $cc
+			transform rotate(-45deg)
+		&.open:before
+			transform rotate(135deg)
+				
+	&.error 
+		&:after
+			opacity 1 
+		label, .in-text
+			color red
+			span 
+				opacity 1
+
+	input, select
+		display block
+		width 100%
+		height 3.2em
+		background #fff
+		border none
+		outline none
+		border-bottom 1px solid #341209
+	select
+		text-transform uppercase
+		-ms-appearance none
+		appearance none
+	
+	textarea
+		display block
+		width 100%
+		height 8em
+		padding-top 1em
+		background #fff
+		border none
+		outline none
+		border-bottom 1px solid #341209
+		
+	label
+		position absolute
+		top 1.4em
+		left 0
+		font-size 1em
+		font-weight 500
+		text-transform uppercase
+		transition transform .2s ease-out
+		transform-origin 0 100%
+		pointer-events none
+		span 
+			display inline-block
+			opacity 0
+			transition opacity .5s
+	
+	input, textarea, select 
+		&:focus + label 
+			transform translateY(-1.6em) scale(0.85)
+			transform-origin 0 0
+	
+	.in-text
+		position relative 
+		height 3.2em 
+		line-height 3.2em 
+		background #fff 
+		border-bottom 1px solid #341209 
+		& after 
+			content "\e913" 
+			font-family 'font-icon' !important 
+			position absolute 
+			font-size 33px 
+			bottom 0px 
+			right 0 
+			line-height 1 
+			transform translateY(-50%) 
+			pointer-events none 
+		
+		span 
+			font-weight 500 
+			text-transform uppercase 
+		input 
+			position absolute 
+			opacity 0 
+			top 0 
+			left 0 
+
+		
+.form-check 
+	input
+		position absolute
+		top 0
+		left 0
+		visibility hidden
+		opacity 0
+		pointer-events none
+		&:checked + label:after
+			visibility visible
+	label
+		position relative
+		display flex
+		align-items center
+		&:before
+			content ''
+			flex-shrink 0
+			display inline-block
+			margin-right 8px
+			width 24px
+			height 24px
+			border 1px solid #f93
+			border-radius 3px
+		&:after
+			content ''
+			position absolute
+			top 3px
+			left 9px
+			width 8px
+			height 15px
+			border 2px solid #f93	
+			border-top 0
+			border-left 0
+			transform rotate(35deg)
+			visibility hidden
+
+	&.error
+		label 
+			color red		
+			
+.form-action 
+		position  relative 
+		margin-top 3.5em 
+		text-align  center 
+		[type='submit'], input[type='submit'] 
+			border 0 
+			outline  none 
+			width  300px 
+			max-width  100% 
+			display  inline-block 
+			btn()
+		
+		.ajax-progress 
+			position  absolute 
+			top  100% 
+			left  50% 
+			transform translateX(-50%) 
+
+.form-thank 
+		position  absolute
+		top  0
+		left  0
+		right  0
+		bottom  0
+		margin  10%
+		font-size  2em
+		background  #fff
+		display  none
+		.wrap 
+			width 100%
+			height  100%
+			border  1px solid #333
+			display  flex
+			flex-wrap wrap
+			align-items  center
+			align-content  center
+			justify-content  center
+			text-align  center
+		
+		h4 
+			width: 100%
+			text-transform  uppercase
+			font-weight 300
+
+
+.send-form__item, .send-form__check 
+	&.error 
+		background none
+
+
+/* == media == */
+// @media $xlg
+
+// @media $lg
+
+// @media $md
+
+// @media $sm
+
+// @media $xs
