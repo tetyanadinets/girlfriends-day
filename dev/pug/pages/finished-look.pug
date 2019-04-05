@@ -8,8 +8,8 @@ block content
 	+b.finished-look-page
 		.container
 			//- .constructor-page__container
-			+e.inner
-				+e.col-l
+			+e.inner(data-sticky_parent)
+				+e.col-l(data-sticky_column)(id="stiky")
 					+b.img-block
 						+b.talking-block
 							+e.title Привіт!
@@ -29,7 +29,7 @@ block content
 						+b.girl-body.girl-body_body-2
 							+e.body-default
 								include ../../static/img/constructor/telo0.svg
-				+e.col-r
+				+e.col-r(data-sticky_column)
 					+e.FORM.form
 						+b.sector
 							+e.tab-outer

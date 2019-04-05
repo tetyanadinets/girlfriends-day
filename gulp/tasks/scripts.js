@@ -16,6 +16,8 @@ module.exports = function() {
 			'node_modules/svg4everybody/dist/svg4everybody.min.js',
 			'node_modules/jquery/dist/jquery.min.js',
 			'node_modules/swiper/dist/js/swiper.min.js',
+			// 'node_modules/sticky-js/dist/sticky.min.js',
+			// 'node_modules/jquery-sticky-kit/dist/sticky-kit.js',
 			'node_modules/inputmask/dist/jquery.inputmask.bundle.js'
 			])
 			.pipe($.gp.concat('libs.min.js'))

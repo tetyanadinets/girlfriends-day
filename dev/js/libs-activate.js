@@ -31,6 +31,11 @@ function libsActivate() {
 		// });
 	})();
 
+	// sticky plugin
+	// (function(){
+	// 	var sticky = new Sticky('#sticky');
+	// })();
+
 }
 
 
