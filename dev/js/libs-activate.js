@@ -1,6 +1,6 @@
 
 function libsActivate() {
-		
+
 	// swiper slider
 	(function(){
 		var productSliderThumbs = new Swiper('.mainSlider', {
@@ -14,10 +14,10 @@ function libsActivate() {
 				el: '.main-slider .swiper-pagination',
 				type: 'bullets',
 				clickable: 'true'
-			}, 
+			},
 		});
 
-		
+
 		// var productsSlider = new Swiper('.swiperProducts', {
 		// 	slidesPerView:3,
 		// 	// effect: 'fade',
@@ -27,13 +27,15 @@ function libsActivate() {
 		// 		nextEl: '.swiperProducts .arr-next',
 		// 		prevEl: '.swiperProducts .arr-prev',
 		// 	},
-		// 	pagination: false 
+		// 	pagination: false
 		// });
 	})();
 
 	// sticky plugin
 	// (function(){
-	// 	var sticky = new Sticky('#sticky');
+	// 	$(".sticky").stick_in_parent({
+	// 		offset_top: 130,
+	// 	});
 	// })();
 
 }

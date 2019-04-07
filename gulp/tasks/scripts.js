@@ -36,7 +36,7 @@ module.exports = function() {
 	//      	errorHandler: function (error) {
 	//        console.log(error.message);
 	//        this.emit('end');
-	//     }}))		
+	//     }}))
 	// 		.pipe($.gp.concat('common.js'))
 	// 		//.pipe($.gp.uglifyjs())
 	// 		.pipe($.gulp.dest('./build/js/'))
@@ -48,7 +48,7 @@ module.exports = function() {
 	// === gulp + webpack + babel  ===
 
 
-	$.gulp.task('js:dev', () => {	
+	$.gulp.task('js:dev', () => {
 		return browserify({
 			entries: [entryFolder + entry]
 		})
@@ -59,12 +59,12 @@ module.exports = function() {
     	console.warn(err.message);
       notifier.notify(err.message);
       this.emit('end');
-    })				
+    })
 		.pipe( source(entry) )
 		.pipe( buffer() )
-		.pipe($.gp.sourcemaps.init({ loadMaps: true }))		
+		.pipe($.gp.sourcemaps.init({ loadMaps: true }))
 		.pipe($.gp.sourcemaps.write('./'))
-	  .pipe($.gp.rename('common.min.js'))		
+	  .pipe($.gp.rename('common.min.js'))
 		.pipe($.gulp.dest('./build/js/'))
 		.pipe($.browserSync.reload({
 			stream: true
@@ -73,7 +73,7 @@ module.exports = function() {
 	});
 
 
-	$.gulp.task('js:build', () => {	
+	$.gulp.task('js:build', () => {
 		return browserify({
 			entries: [entryFolder + entry]
 		})
@@ -84,13 +84,13 @@ module.exports = function() {
       console.log(err.message);
       notifier.notify(err.message);
       this.emit('end');
-    })				
+    })
 		.pipe( source(entry) )
 		.pipe( buffer() )
-		.pipe($.gp.sourcemaps.init({ loadMaps: true }))		
+		.pipe($.gp.sourcemaps.init({ loadMaps: true }))
 		.pipe($.gp.uglifyjs())
 		.pipe($.gp.sourcemaps.write('./'))
-	  .pipe($.gp.rename('common.min.js'))		
+	  .pipe($.gp.rename('common.min.js'))
 		.pipe($.gulp.dest('./build/js/'))
 		.pipe($.browserSync.reload({
 			stream: true
