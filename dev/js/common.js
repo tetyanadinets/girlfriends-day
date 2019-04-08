@@ -15,6 +15,7 @@ module.exports = class Common {
 		this.constructorGirl();
 		// this.scrollMedia();
 		this.showInputs();
+		this.sendInputValue();
 	}
 
 
@@ -77,8 +78,21 @@ module.exports = class Common {
 	}
 
 	showInputs() {
+		var clicks = 5;
+		var row = $( ".share-form__row_append" ).html();
+
 		$('.share-form__show-btn').on('click', function(){
-			$('.share-form__hidden').toggleClass('show');
+
+			--clicks;
+
+			if( clicks >=0 ) {
+
+				$(this).find('span').html( '(' + clicks + ')' );
+
+				$('.share-form__hidden').append(row);
+				
+			}
+
 		});
 	}
 
@@ -117,7 +131,7 @@ module.exports = class Common {
 
 	checkboxChecked() {
 		var checkbox = $('.popup-code__input-check');
-		var checkboxShare = $('#share-checkbox');
+		// var checkboxShare = $('#share-checkbox');
 
 
 		checkbox.on('click', function(){
@@ -128,34 +142,49 @@ module.exports = class Common {
 
 		});
 
-		checkboxShare.on('click', function(){
-			console.log('ok');
-			if ($('#share-checkbox:checked').val() !== undefined) {
-					checkboxShare.attr('checked', true);
-					checkboxShare.attr('disabled', true);
-				}
-		});
+		// checkboxShare.on('click', function(){
+		// 	console.log('ok');
+		// 	if ($('#share-checkbox:checked').val() !== undefined) {
+		// 			checkboxShare.attr('checked', true);
+		// 			checkboxShare.attr('disabled', true);
+		// 		}
+		// });
 	}
 
 	switchTabs(){
-			var switchBtn = $('.btns__item');
-			// var switchContent = $('.constructor-page__products');
+		var switchBtn = $('.btns__item');
+		// var switchContent = $('.constructor-page__products');
 
-			switchBtn.on('click', function(){
-				var dataSwitchbtn = $(this).data('switchbtn');
-				var switchCurrent = $('.' + dataSwitchbtn);
-				var switchContent = $(this).closest('.sector__tab-outer').find('.constructor-page__products');
+		switchBtn.on('click', function(){
+			var dataSwitchbtn = $(this).data('switchbtn');
+			var switchCurrent = $('.' + dataSwitchbtn);
+			var switchContent = $(this).closest('.sector__tab-outer').find('.constructor-page__products');
+			// var slider= $(this).closest('.sector__tab-outer').find('.constructor-page__products .swiperProducts');
+
+			// console.log(slider)
+
+			switchContent.removeClass('current');
+			switchCurrent.addClass('current');
+			
+			switchBtn.removeClass('current-btn');
+			$(this).addClass('current-btn active');
+			$(this).siblings().removeClass('active');
 
 
-				switchContent.removeClass('current');
-				switchCurrent.addClass('current');
-				
-				switchBtn.removeClass('current-btn');
-				$(this).addClass('current-btn active');
-				$(this).siblings().removeClass('active');
-			})
+			// var mySwiper = new Swiper($(slider)[0],{
+			// 	slidesPerView:3,
+			// 	loop: true,
+			// 	spaceBetween: 20,
+			// 	navigation: {
+			// 		nextEl: '.swiperProducts .arr-next',
+			// 		prevEl: '.swiperProducts .arr-prev',
+			// 	},
+			// 	pagination: false
+			// });
 
-		}
+		})
+
+	}
 
 
 	scrollAnchors(btn, offset, callback) {
@@ -261,7 +290,7 @@ module.exports = class Common {
 			$(this).addClass('active');
 		});
 
-		// CLER
+		// CLEAR
 
 		$('.bottom-btns__btn-clear').on('click', function(){
 				$('.products__item').removeClass('active');
@@ -272,6 +301,19 @@ module.exports = class Common {
 				$('.girl-head__head-default').addClass('show');
 		});
 
+	}
+
+	sendInputValue() {
+		$('.products__item').on('click', function(){
+			var input = $(this).closest('.sector__content').find('input');
+			var prodValue = $(this).data('prod');
+			var btn = $(this).closest('.sector__tab-outer').find('.btns__item.current-btn')
+			var btnValue = btn.data('hair');
+
+			console.log(prodValue, btnValue);
+
+			input.val( btnValue + " , " + prodValue);
+		});
 	}
 
 	scrollMedia() {

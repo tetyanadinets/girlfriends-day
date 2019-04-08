@@ -1,4 +1,4 @@
-.constructor-page
+.constructor
 	position relative
 	z-index 11
 	padding-top 130px
@@ -113,7 +113,7 @@
 	&__title
 		margin-bottom 30px
 		color #000
-		font 500 16px/1 'Quanelas', Helvetica, sans-serif
+		font 600 16px/1 'Quanelas', Helvetica, sans-serif
 	&__item
 		btn-tab()
 		padding 0 5px
@@ -158,7 +158,10 @@
 			background-color #000
 			border-radius 3px
 			cursor pointer
-
+	&__slider
+		overflow hidden
+		position relative
+		padding-bottom 30px
 	&__item
 		display inline-block
 		margin 0 5px
@@ -166,6 +169,8 @@
 		border 3px solid transparent
 		border-radius 12px
 		transition all .3s ease
+		height 212px
+		// position relative
 		&:hover
 			border-color #FF8539
 			.products__item-body
@@ -189,13 +194,17 @@
 		text-decoration none
 		transition all .3s ease
 		position relative
+		// position absolute
+		// left 0
+		// top 0
+		// width 100%
 		a
 			cursor pointer
 			width calc(100% + 8px)
 			display inline-block
 			background-color #FF8539
 			position absolute
-			bottom -20px
+			bottom -16px
 			left -4px
 			color #fff
 			border-radius 0px 0px 8px 8px
@@ -208,6 +217,27 @@
 		img
 			height 100%
 			width auto
+			margin 0 auto
+
+// .swiperProducts
+// 	.arr
+// 		width 20px
+// 		height 20px
+// 		position absolute
+// 		z-index 99
+// 	.arr-next
+// 		border-top 1px solid #FF8835
+// 		border-left 1px solid #FF8835
+// 		transform rotate(45deg)
+// 		left -35px
+// 		top 0
+// 	.arr-prev
+// 		border-top 1px solid #FF8835
+// 		border-right 1px solid #FF8835
+// 		transform rotate(-45deg)
+// 		left -35px
+// 		top 30px
+		
 
 .bottom-btns
 	display -webkit-flex

@@ -1,57 +1,39 @@
 .share-look-page
 	padding-top 0
 	&__top
-		padding-bottom 350px
+		margin-bottom 360px
 		padding-top 260px
-		// background-color #FF9C56
+		background-color #FF9C56
 		position relative
-		// &:before
-		// 	content ''
-		// 	display block
-		// 	position absolute
-			// width 100%
-			// height 600px
-			// left 0
-			// top 0
-			// // background url('../../img/lorem/orange-bg.png') top center no-repeat
-			// // background-size cover
-		+mw(880px)
-			padding-top 80px
-		+mw(480px)
-			padding-top 60px
-			min-height 895px
 		&:before
 			content ''
 			display block
 			position absolute
 			width 100%
-			height 1900px
+			height 500px
 			left 0
-			top 0
-			background url('../img/lorem/orange-bg.png') no-repeat bottom left
+			bottom 0
+			background url('../img/lorem/orange-bg2.png') no-repeat bottom left
 			background-size cover
 			z-index -1
 			+mw(1920px)
-				height 1850px
-				// width 1922px
+				height 530px
+				bottom -520px
 				width 100%
 			+mw(1880px)
-				height 1700px
-			+mw(1780px)
-				height 1780px
-			+mw(1680px)
-				height 1770px
-			+mw(1580px)
-				height 1760px
-			+mw(1480px)
-				height 1750px
+				height 500px
+				bottom -490px
 			+mw(1380px)
-				height 1700px
-			+mw(1100px)
-				height 1700px
+				height 450px
+				bottom -440px
 			+mw(480px)
-				height 1000px
-				width 1000px
+				height 350px
+				bottom -340px
+		+mw(880px)
+			padding-top 80px
+		+mw(480px)
+			padding-top 60px
+			min-height 895px
 
 
 .share-form
@@ -95,13 +77,24 @@
 	&__show-btn
 		text-align center
 		color #fff
-		margin-bottom 80px
+		margin-bottom 30px
+		padding-bottom 5px
 		cursor pointer
+		border-bottom 1px dashed transparent
+		transition border .3s ease
+		display inline-block
+		&:hover
+			border-color #fff
 	&__hidden
-		display none
-		&.show
-			display block
-			margin-bottom 40px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		align-items center
+		flex-wrap wrap
+		margin-bottom 60px
 	&__section
 		&_checkbox
 			cursor pointer
@@ -142,8 +135,10 @@
 		color #fff
 		text-align center
 		margin 85px auto
-		border 1px solid #fff
 		width 370px
 		padding 15px
 		background-color transparent
 		border-radius 50px
+		border 1px solid #fff
+		cursor pointer
+

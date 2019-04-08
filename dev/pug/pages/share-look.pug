@@ -1,8 +1,8 @@
 extends ../main
 
 block variables
-	- var title = 'Страница с готовым образом';
-	- var pageClass = 'finished-lool-page';
+	- var title = 'Страница поделиться';
+	- var pageClass = 'share-look-page';
 
 block content
 	+b.finished-look-page.share-look-page
@@ -12,7 +12,7 @@ block content
 					+b.FORM.share-form
 						+e.section
 							+e.title поділись створеним луком с подругами
-							+e.row
+							+e.row.share-form__row_append
 								.fieldset.form-item.valid
 									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
 									.help-block Введіть teлефон
@@ -22,58 +22,59 @@ block content
 								.fieldset.form-item.valid
 									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
 									.help-block Введіть ім'я
-						+e.show-btn + надіслати ще одній подрузі (5)
+						+e.show-btn + надіслати ще одній подрузі 
+							span 
 						+e.hidden
-							+e.row
-								.fieldset.form-item.valid
-									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
-									.help-block Введіть teлефон
-								.fieldset.form-item.valid
-									+e.INPUT(type="email" name="email" placeholder="Пошта").name
-									.help-block Введіть пошту
-								.fieldset.form-item.valid
-									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
-									.help-block Введіть ім'я
-							+e.row
-								.fieldset.form-item.valid
-									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
-									.help-block Введіть teлефон
-								.fieldset.form-item.valid
-									+e.INPUT(type="email" name="email" placeholder="Пошта").name
-									.help-block Введіть пошту
-								.fieldset.form-item.valid
-									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
-									.help-block Введіть ім'я
-							+e.row
-								.fieldset.form-item.valid
-									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
-									.help-block Введіть teлефон
-								.fieldset.form-item.valid
-									+e.INPUT(type="email" name="email" placeholder="Пошта").name
-									.help-block Введіть пошту
-								.fieldset.form-item.valid
-									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
-									.help-block Введіть ім'я
-							+e.row
-								.fieldset.form-item.valid
-									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
-									.help-block Введіть teлефон
-								.fieldset.form-item.valid
-									+e.INPUT(type="email" name="email" placeholder="Пошта").name
-									.help-block Введіть пошту
-								.fieldset.form-item.valid
-									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
-									.help-block Введіть ім'я
-							+e.row
-								.fieldset.form-item.valid
-									+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
-									.help-block Введіть teлефон
-								.fieldset.form-item.valid
-									+e.INPUT(type="email" name="email" placeholder="Пошта").name
-									.help-block Введіть пошту
-								.fieldset.form-item.valid
-									+e.INPUT(type="text" name="name" placeholder="Ім'я").name
-									.help-block Введіть ім'я
+						//- +e.row.share-form__row_hidden
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+						//- 		.help-block Введіть teлефон
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="email" name="email" placeholder="Пошта").name
+						//- 		.help-block Введіть пошту
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+						//- 		.help-block Введіть ім'я
+						//- +e.row.share-form__row_hidden
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+						//- 		.help-block Введіть teлефон
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="email" name="email" placeholder="Пошта").name
+						//- 		.help-block Введіть пошту
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+						//- 		.help-block Введіть ім'я
+						//- +e.row.share-form__row_hidden
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+						//- 		.help-block Введіть teлефон
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="email" name="email" placeholder="Пошта").name
+						//- 		.help-block Введіть пошту
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+						//- 		.help-block Введіть ім'я
+						//- +e.row.share-form__row_hidden
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+						//- 		.help-block Введіть teлефон
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="email" name="email" placeholder="Пошта").name
+						//- 		.help-block Введіть пошту
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+						//- 		.help-block Введіть ім'я
+						//- +e.row.share-form__row_hidden
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="tel" name="phone" placeholder="Телефон").phone
+						//- 		.help-block Введіть teлефон
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="email" name="email" placeholder="Пошта").name
+						//- 		.help-block Введіть пошту
+						//- 	.fieldset.form-item.valid
+						//- 		+e.INPUT(type="text" name="name" placeholder="Ім'я").name
+						//- 		.help-block Введіть ім'я
 						+e.section
 							+e.title поділись створеним луком с подругами
 							+e.row
@@ -100,16 +101,16 @@ block content
 					+b.img-block
 						+b.girl-head.girl-head_mat
 							+e.head-default.girl-head__item
-								include ../../static/img/constructor/golova0.svg
+								include ../../static/img/svg/golova0.svg
 							+e.head-friz.friz.girl-head__item
-								include ../../static/img/constructor/golova1_Kydri.svg
+								include ../../static/img/svg/golova1_Kydri.svg
 							+e.head-curls.girl-head__item.curls.show
-								include ../../static/img/constructor/golova2_Lokonu.svg
+								include ../../static/img/svg/golova2_Lokonu.svg
 							+e.head-straight.girl-head__item.straight
-								include ../../static/img/constructor/golova3_Pramue.svg
+								include ../../static/img/svg/golova3_Pramue.svg
 						+b.girl-body.girl-body_body-2
 							+e.body-default
-								include ../../static/img/constructor/telo0.svg
+								include ../../static/img/svg/telo0.svg
 				+e.col-r
 					+e.FORM.form
 						+b.sector

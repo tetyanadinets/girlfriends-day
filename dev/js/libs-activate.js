@@ -20,15 +20,32 @@ function libsActivate() {
 
 		// var productsSlider = new Swiper('.swiperProducts', {
 		// 	slidesPerView:3,
-		// 	// effect: 'fade',
 		// 	loop: true,
-		// 	spaceBetween: 30,
+		// 	spaceBetween: 20,
 		// 	navigation: {
 		// 		nextEl: '.swiperProducts .arr-next',
 		// 		prevEl: '.swiperProducts .arr-prev',
 		// 	},
 		// 	pagination: false
 		// });
+
+		// $('.swiperProducts').each(function (index) {
+		// 		console.log('ok');
+		// 	var mySwiper = new Swiper($(this)[0],{
+		// 		slidesPerView:3,
+		// 		loop: true,
+		// 		spaceBetween: 20,
+		// 		navigation: {
+		// 			nextEl: '.swiperProducts .arr-next',
+		// 			prevEl: '.swiperProducts .arr-prev',
+		// 		},
+		// 		pagination: false
+		// 	});
+		// });
+
+
+
+
 	})();
 
 	// sticky plugin
