@@ -1,6 +1,6 @@
 
 .hero
-	background url('../img/lorem/poster.png') no-repeat center center
+	background #FDF10F url('../img/lorem/poster.png') no-repeat center center
 	background-size cover
 	height 100vh
 	overflow-x hidden
@@ -24,29 +24,29 @@
 	background-size cover
 
 .log-in
-	padding 170px 0 50px
+	padding 300px 0 50px
 	position relative
 	overflow-x hidden
-	&:after 
-		content ''
-		display block
-		position absolute
-		width 300px
-		height 350px
-		background url('../img/lorem/grid.png') no-repeat center center
-		background-size cover
-		right 0
-		top 310px
-		+mw(1100px)
-			top -190px
-		+mw(768px)
-			width 250px
-			height 280px
-			top -120px
-		+mw(480px)
-			width 170px
-			height 190px
-			top -90px
+	// &:after 
+	// 	content ''
+	// 	display block
+	// 	position absolute
+	// 	width 300px
+	// 	height 350px
+	// 	background url('../img/lorem/grid.png') no-repeat center center
+	// 	background-size cover
+	// 	right 0
+	// 	top 310px
+	// 	+mw(1100px)
+	// 		top -190px
+	// 	+mw(768px)
+	// 		width 250px
+	// 		height 280px
+	// 		top -120px
+	// 	+mw(480px)
+	// 		width 170px
+	// 		height 190px
+	// 		top -90px
 	// +mw(880px)
 	// 	padding-top 80px
 	// +mw(480px)
@@ -91,13 +91,17 @@
 	// 		height 800px
 	// 		width 1000px
 	&__inner
-		align-items flex-end
+		align-items center
+		.col-l
+			width 64%	
+		.col-r
+			width 29%	
 	&__title
-		font 700 28px/1 'Quanelas', Helvetica, sans-serif
+		font 700 25px/1.7 'FranklinGothic', Helvetica, sans-serif
 		text-transform uppercase
 		text-align center
 		margin-bottom 60px
-		color #212121
+		color #EC2126
 		max-width 580px
 		margin 0 auto
 		+mw(880px)
@@ -105,21 +109,18 @@
 		+mw(480px)
 			font-size 22px
 			margin-bottom 30px
-	&__img
-		width 254px
-		height auto
-		&:nth-child(2)
-			transform translateY(-50%)
-			margin 0 20px
 	.form
-		margin 90px auto 0
+		margin 45px auto 0
 		width 450px
 		+mw(880px)
 			display block
 		&__fieldset
 			border none
 			width 100%
-			margin-bottom 20px
+			// margin-bottom 20px
+			.help-block
+				opacity 0
+				visibility hidden
 			&.has-error
 				input
 					border-color red
@@ -127,7 +128,7 @@
 					display block
 					opacity 1
 					visibility visible
-					color red
+					color #ec2126
 			&:last-child
 				margin-bottom 0
 			+mw(880px)
@@ -135,16 +136,17 @@
 		label
 			display inline-block
 			margin-bottom 10px
-			font 400 14px/1 'Quanelas', Arial, Helvetica, sans-serif
+			font 700 14px/1 'FranklinGothic', Arial, Helvetica, sans-serif
 			position static
 			text-transform none
 		input
 			background-color #fff
 			height 55px
 			border-radius 55px
-			border 1px solid #FF8835
+			border 1px solid #FDF10F
 			padding 15px
 			width 100%
+			color #024CBD
 			+mw(480px)
 				height 40px
 		&__fieldgroup
@@ -152,25 +154,25 @@
 		&__btn
 			btn()
 			border none
-			min-width 125px
-			position absolute
-			right 3px
-			top 3px
-			z-index 9
+			display block
+			max-width 200px
+			margin 0 auto
 			line-height 50px
 			text-align center
+			margin-top 25px
 			+mw(480px)
 				height 40px
 	
 			
 .rules
-	padding-top 210px
+	padding-top 250px
 	position relative
 	&__title
 		text-align center
 		position relative
-		margin-bottom 70px
-		font-size 28px
+		margin-bottom 75px
+		font-size 25px
+		color #EC2126
 		+mw(480px)
 			font-size 22px
 			margin-bottom 40px
@@ -187,7 +189,7 @@
 		display -ms-flex
 		display -o-flex
 		display flex
-		align-items center
+		align-items flex-start
 		justify-content space-around
 	&__inner
 		display block
@@ -198,25 +200,30 @@
 .step
 	width 380px
 	text-align center
-	padding 20px
+	padding 55px 35px 35px 35px
 	transition all .3s ease
 	border-radius 20px
 	overflow-x hidden
+	position relative
 	+mw(480px)
 		padding 3px
 	&:hover
 		hover()
 	&__num
-		color $colorMain
-		font 600 28px/1 'Quanelas', Arial, Helvetica, sans-serif
+		color #EC2126
+		font 600 28px/1 'FranklinGothic', Arial, Helvetica, sans-serif
 		text-align left
 		margin-bottom 30px
+		padding-left 35px
+		position absolute
+		left 35px
+		top 25px
 		+mw(480px)
 			font-size 22px
 			margin-bottom 10px
 			text-align center
 	&__img
-		max-width 225px
+		max-width 250px
 		height auto
 		margin-bottom 30px
 		+mw(880px)
@@ -226,8 +233,8 @@
 		+mw(480px)
 			max-width 100px
 	&__text
-		font normal 14px/20px 'Quanelas', Arial, Helvetica, sans-serif
-		padding 25px 0 0
+		font 700 16px/28px 'FranklinGothic', Arial, Helvetica, sans-serif
+		padding 5px 55px 0
 		+mw(480px)
 			font-size 14px
 			line-height 1
@@ -236,28 +243,28 @@
 .prisec
 	position relative
 	z-index 3
-	padding 190px 0 50px
+	padding 240px 0 50px
 	overflow-x hidden
-	&:after 
-		content ''
-		display block
-		position absolute
-		width 300px
-		height 350px
-		background url('../img/lorem/grid.png') no-repeat center center
-		background-size cover
-		left 0
-		bottom 0
-		+mw(1100px)
-			top -190px
-		+mw(768px)
-			width 250px
-			height 280px
-			top -120px
-		+mw(480px)
-			width 170px
-			height 190px
-			top -90px
+	// &:after 
+	// 	content ''
+	// 	display block
+	// 	position absolute
+	// 	width 300px
+	// 	height 350px
+	// 	background url('../img/lorem/grid.png') no-repeat center center
+	// 	background-size cover
+	// 	left 0
+	// 	bottom 0
+	// 	+mw(1100px)
+	// 		top -190px
+	// 	+mw(768px)
+	// 		width 250px
+	// 		height 280px
+	// 		top -120px
+	// 	+mw(480px)
+	// 		width 170px
+	// 		height 190px
+	// 		top -90px
 	// min-height 1730px
 	// width 100vw
 	// overflow-x hidden
@@ -355,10 +362,13 @@
 	// 		width 100%
 	// 		height 190px
 	&__inner
-		align-items center
+		align-items flex-end
 	&__title
 		text-align center
-		margin-bottom 210px
+		margin-bottom 85px
+		margin-bottom 80px
+		color #EC2126
+		font-size 26px
 		+mw(880px)
 			margin-top 150px
 		+mw(600px)
@@ -366,9 +376,12 @@
 			font-size 22px
 	&__text
 		max-width 670px
+		font-weight 700
 		text-align left
 		margin-left auto
 		margin-right 0
+		font-size 16px
+		line-height 36px
 	&__items-inner
 		margin 0 auto
 		display -webkit-flex
@@ -389,19 +402,25 @@
 			display block
 			max-height 100%
 	.item
-		width 250px
-		height 300px
+		width 48%
+		height 400px
 		background-color #fff
-		border-radius 20px
+		border 1px solid #024CBD
 		padding 15px
 		display flex
 		align-items center
 		justify-content center
-		border 1px solid #FF8835
 		position relative
+		border-radius 20px
 		z-index 5
 		overflow hidden
 		transition all .5s ease
+		&_fist
+			.item__text
+				color #024CBD
+		&_second
+			.item__text
+				color #EC2126
 		+mw(880px)
 			width 290px
 			height 325px
@@ -419,37 +438,12 @@
 			height 68px	
 			left 35px
 			top 35px
-		&_first
-			transform translateY(-60px)
-			&:before
-				background url('../img/lorem/1st.png') no-repeat center center
-				background-size cover
-			.item__title
-				&:before
-					background url('../img/lorem/1st.png') no-repeat center center
-					background-size cover
-		&_second
-			transform translateY(-160px)
-			&:before
-				background url('../img/lorem/2st.png') no-repeat center center
-				background-size cover
-			.item__title
-				&:before
-					background url('../img/lorem/2st.png') no-repeat center center
-					background-size cover
-		&_third
-			&:before
-				background url('../img/lorem/3st.png') no-repeat center center
-				background-size cover
-			.item__title
-				&:before
-					background url('../img/lorem/3st.png') no-repeat center center
-					background-size cover
 		&:hover
+			border-color #FDF10F
 			.item__info
 				opacity 1
 				transform translateY(0)
-				transition all .3s ease
+				transition all .5s ease
 		&__info
 			position absolute
 			width 100%
@@ -464,33 +458,44 @@
 			display -o-flex
 			display flex
 			justify-content center
-			align-items center
+			align-items flex-start
 			flex-direction column
-			background #fff
-			border 20px solid #f2dcca
+			background #FDF10F
 			border-radius inherit
 			padding 40px
 			transition all .3s ease
-			
-		&__title
-			text-align center
-			font bold 18px/1 'Quanelas', Arial, Helvetica, sans-serif
-			color #ff8835
-			margin-bottom 20px
-			position relative
-			padding-top 100px
-			&:before
-				content ''
-				display block
-				position absolute
-				width 68px
-				height 68px	
-				left 50%
-				transform translateX(-50%)
-				top 0
+		&__text
+			background-color #fff
+			position absolute
+			display inline
+			left 30px
+			bottom 95px
+			font 700 22px/1 'FranklinGothic', Arial, Helvetica, sans-serif
+			max-width 240px
+			color #024CBD
+		// &__title
+		// 	text-align center
+		// 	font 700 18px/1 'FranklinGothic', Arial, Helvetica, sans-serif
+		// 	color #ff8835
+		// 	margin-bottom 20px
+		// 	position relative
+		// 	padding-top 100px
+		// 	&:before
+		// 		content ''
+		// 		display block
+		// 		position absolute
+		// 		width 68px
+		// 		height 68px	
+		// 		left 50%
+		// 		transform translateX(-50%)
+		// 		top 0
 		&__desc
-			font normal 18px/1 'Quanelas', Arial, Helvetica, sans-serif
-			text-align center
+			font 700 18px/1.2 'FranklinGothic', Arial, Helvetica, sans-serif
+			text-align left
+			color #024CBD
+			margin-bottom 30px
+			&:last-child
+				margin-bottom 0
 
 .partners
 	text-align center
@@ -499,10 +504,10 @@
 	z-index 9
 	background transparent
 	overflow-x hidden
-	padding-top 200px
+	padding-top 260px
 	&__title
 		text-align center
-		margin-bottom 140px
+		margin-bottom 80px
 		+mw(1100px)
 			margin-bottom 90px
 			padding-top 0
@@ -518,12 +523,9 @@
 				display none
 	&__link
 		btn()
-		-webkit-box-shadow 0px 0px 73px -20px rgba(0,0,0,0.75)
-		-moz-box-shadow 0px 0px 73px -20px rgba(0,0,0,0.75)
-		box-shadow 0px 0px 73px -20px rgba(0,0,0,0.75)
 		display inline-block
-		min-width 240px
-		padding 17px 0
+		min-width 200px
+		padding 18px 0 16px
 		position relative
 		z-index 9
 	&__cards
@@ -534,7 +536,7 @@
 		display -ms-flex
 		display -o-flex
 		display flex
-		justify-content space-between
+		justify-content center
 		align-items flex-start
 		flex-wrap wrap
 		margin-bottom 70px
@@ -542,8 +544,8 @@
 			justify-content center
 			margin-bottom 35px
 	.card
-		width 160px
-		height 160px
+		width 170px
+		height 170px
 		margin 15px
 		padding 15px
 		display flex
@@ -563,7 +565,8 @@
 	height 60px
 	border-radius 50%
 	border 1px solid #f8f5f6
-	background linear-gradient(180deg, #FF6D56 0%, #FF8835 100%)
+	// background linear-gradient(180deg, #FF6D56 0%, #FF8835 100%)
+	background-color #FDF10F
 	position fixed
 	z-index 99
 	right 30px
@@ -582,8 +585,8 @@
 		display block
 		width 25px
 		height 25px
-		border-top 3px solid #FFF
-		border-right 3px solid #FFF
+		border-top 3px solid #024CBD
+		border-right 3px solid #024CBD
 		position absolute
 		left 17px
 		top 22px

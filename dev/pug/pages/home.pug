@@ -5,34 +5,29 @@ block variables
 	- var pageClass = 'home-page';
 
 block content
-	+b.SECTION.hero(style='background:url(img/lorem/poster.png) no-repeat right bottom; background-size: contain;')
+	+b.SECTION.hero(style='background:#FDF10F url(img/lorem/poster.png) no-repeat center bottom;')
 		.container
-			+e.H1.h1 Зміни образ разом з Еva, дивуй, захоплюй, інтригуй. Поділись з 5 подругами новим луком та отримай 500 бонусів у подарунок.
+	
 	
 	+b.SECTION.log-in
 		.container
 			+e.inner.inner
-				+e.col.col
-					+e.imgs
-						+e.IMG.img(src="img/lore qm/log-in_1.png" alt="")
-						+e.IMG.img(src="img/lorem/log-in_2.png" alt="")
-						+e.IMG.img(src="img/lorem/log-in_3.png" alt="")
-				+e.col.col
-					+e.H2.title Увійдіть, щоб взяти участь у конкурсі
+				+e.col.col-l
+					+e.IMG.img(src="img/lorem/log-in.png" alt="")
+				+e.col.col-r
+					+e.H2.title Увійдіть,
+						br
+						| щоб взяти участь у конкурсі
 					+b.FORM.form
-						+e.fieldset.form-item.valid.has-error
+						+e.fieldset.form-item.valid
 							label Ім'я
-							+e.INPUT(type="text" name="name" placeholder="Єва Подругіна").name
+							+e.INPUT(type="text" name="name").name
 							.help-block Введіть ім'я
 						+e.fieldset.form-item.valid
 							label Номер телефону
-							+e.INPUT(type="tel" name="phone" placeholder="+38 (0**) *** - ** - **").phone
+							+e.INPUT(type="tel" name="phone").phone
 							.help-block Введіть телефон
-						+e.fieldset.valid
-							label Електронна пошта
-							+e.fieldgroup
-								+e.INPUT(type="email" name="email" placeholder="*******@****.ua" required).mail
-								+e.A(href="#popupCode").btn.popupBtn Увійти
+						+e.A(href="#popupCode").btn.popupBtn Увійти
 	+b.SECTION.rules
 		.container
 			+e.inner.inner
@@ -54,24 +49,23 @@ block content
 		.container
 			+e.inner.inner
 				+e.col.col
-					+e.title.title(id='prisec') Призи
+					+e.title.title(id='prisec') Подарунки
 					+e.items-outer
 						+e.items-inner
 							+b.item.item_first
-								+e.IMG.img(src='img/lorem/item1.png' alt='')
+								+e.IMG.img(src='img/lorem/prises-1.png' alt='')
+								+e.P.text Набір для догляду за зубками і не тільки
 								+e.info
-									+e.title 1е місце
-									+e.desc Рідкі кристали для волосся TM Brelil Bio
+									+e.desc Тример Veet для бритья женский
+									+e.desc Гель для бритья Gillette Satin Care женский для чувствительной кожи, 200мл
+									+e.desc MAY body Бальзам после депиляции 150 мл
 							+b.item.item_second
-								+e.IMG.img(src='img/lorem/item2.png' alt='')
+								+e.IMG.img(src='img/lorem/prises-2.png' alt='')
+								+e.P.text Набір для догляду за ніжкамии і не тільки
 								+e.info
-									+e.title 2е місце
-									+e.desc Рідкі кристали для волосся TM Brelil Bio
-							+b.item.item_third
-								+e.IMG.img(src='img/lorem/item3.png' alt='')
-								+e.info
-									+e.title 3е місце
-									+e.desc Рідкі кристали для волосся TM Brelil Bio
+									+e.desc Тример Veet для бритья женский
+									+e.desc Гель для бритья Gillette Satin Care женский для чувствительной кожи, 200мл
+									+e.desc MAY body Бальзам после депиляции 150 мл
 				+e.col.col
 					+e.P.text Quisque velit risus, scelerisque ut volutpat a, pellentesque ut enim. Donec ligula mi, aliquet quis erat pellentesque, imperdiet dictum neque. Praesent et elit nec ex ultrices semper eget at eros. Fusce eu fringilla enim. Morbi dignissim nunc a enim lobortis ultricies id at ligula. Nunc eget nisi sit amet magna tempor bibendum. Aliquam iaculis vel mauris in blandit. Integer luctus in enim dapibus euismod. In risus libero, tristique at fermentum nec, suscipit vel diam. Morbi sit amet fringilla ligula. Sed at neque ipsum. Vestibulum vel erat neque. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
 	+b.SECTION.partners
@@ -86,27 +80,9 @@ block content
 					+e.IMG(src='img/lorem/partner2.png' alt='').img
 				+b.card
 					+e.IMG(src='img/lorem/partner3.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner4.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner5.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner6.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner7.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner8.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner9.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner10.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner11.png' alt='').img
-				+b.card
-					+e.IMG(src='img/lorem/partner12.png' alt='').img
 			+e.A(href='').link офіційні правила
 
-	button.go-top
+
 	
 
 

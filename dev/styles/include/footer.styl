@@ -1,37 +1,42 @@
 .footer
 	flex 0 0 auto
-	min-height 800px
+	// min-height 800px
 	position relative
-	padding-top 530px
-	margin-top -105px
+	// padding-top 530px
+	margin-top 80px
+	padding 130px 0 80px
+	// margin-top -105px
+	color #024CBD
+	background-color #FDF10F
 	+mw(1100px)
-		min-height auto
-		padding-top 480px
-		padding-bottom 50px
-	+mw(480px)
-		padding-top 330px
-		padding-bottom 0
-	&:before
-		content ''
-		position absolute
-		display block
-		bottom 0
-		left 0
-		width 100%
-		height 100%
-		background url("../img/lorem/footer-bg.png") no-repeat top right
-		background-size cover
-		+mw(1980px)
-			width 100%
-			height 980px
-		+mw(1780px)
-			width 100%
-			height 950px
-		+mw(1680px)
-			width 100%
-			height 900px
-		+mw(1100px)
-			height 760px
+		padding 60px 0
+	// 	min-height auto
+	// 	padding-top 480px
+	// 	padding-bottom 50px
+	// +mw(480px)
+	// 	padding-top 330px
+	// 	padding-bottom 0
+	// &:before
+	// 	content ''
+	// 	position absolute
+	// 	display block
+	// 	bottom 0
+	// 	left 0
+	// 	width 100%
+	// 	height 100%
+	// 	background url("../img/lorem/footer-bg.png") no-repeat top right
+	// 	background-size cover
+	// 	+mw(1980px)
+	// 		width 100%
+	// 		height 980px
+	// 	+mw(1780px)
+	// 		width 100%
+	// 		height 950px
+	// 	+mw(1680px)
+	// 		width 100%
+	// 		height 900px
+	// 	+mw(1100px)
+	// 		height 760px
 	&__inner
 		display -webkit-flex
 		display -moz-flex
@@ -41,17 +46,23 @@
 		justify-content space-between
 		align-items flex-start
 		position relative
+		+mw(768px)
+			display block
 		&_bot
-			margin-top 95px
+			margin-top 90px
 			align-items baseline
+			+mw(1100px)
+				margin-top 60px		
+			+mw(768px)
+				display block
 			+mw(480px)
 				margin-top 30px
-		+mw(480px)
-			display block
 	&__col
 		width 300px
 		text-align left
-		+mw(480px)
+		+mw(1100px)
+			width 220px
+		+mw(768px)
 			width 100%
 			text-align center
 			margin-bottom 20px
@@ -59,16 +70,17 @@
 			
 	&__title
 		text-transform uppercase
-		font 700 16px/1 'Quanelas', Arial, Helvetica, sans-serif
+		font 700 14px/1 'FranklinGothic', Arial, Helvetica, sans-serif
 		padding-bottom 7px
-		border-bottom 1px solid #000
-		margin-bottom 7px
-		color #000
+		border-bottom 1px solid #024CBD
+		margin-bottom 18px
+		color #024CBD
 	&__info
-		font 500 16px/20px 'Quanelas', Arial, Helvetica, sans-serif
+		font 600 16px/20px 'FranklinGothic', Arial, Helvetica, sans-serif
 		color inherit
 		text-decoration none
 		display block
+		margin-bottom 5px
 		&_link
 			transition opacity .3s ease
 			&:hover
@@ -86,7 +98,9 @@
 	align-items baseline
 	justify-content space-between
 	max-width 225px
-	margin auto
+	margin 40px 0 0
+	+mw(768px)
+		margin 20px auto 0
 	&__item
 		text-decoration none
 		width 25px
@@ -95,7 +109,7 @@
 		&:hover
 			opacity .7
 		svg
-			fill #333333
+			fill #024cbd
 		// &_fb
 		// 	background url("../img/svg/icons/fb.svg") no-repeat center center
 		// 	background-size contain

@@ -7,7 +7,7 @@ mixin popup(data)
 				+e.H2.title На ваш номер телефону відправлено смс з кодом. Введіть код з смс для підтвердження реєстрації
 				+e.FORM.form
 					.form__fieldset.valid
-						+e.INPUT(type="text" name="a-code" placeholder="XX XX XX").code
+						+e.INPUT(type="text" name="a-code").code
 						span Неправильний код
 					+e.A(href="").repeat Надіслати повторно через 60 сек
 					+e.checkbox

@@ -155,13 +155,17 @@ module.exports = class Common {
 		var switchBtn = $('.btns__item');
 		// var switchContent = $('.constructor-page__products');
 
+		var parent = switchBtn.closest('[data-base]');
+
+		var currentBtn = parent.find('.btns__item');
+
+		currentBtn.first().addClass('current-btn')
+		console.log(currentBtn)
+
 		switchBtn.on('click', function(){
 			var dataSwitchbtn = $(this).data('switchbtn');
 			var switchCurrent = $('.' + dataSwitchbtn);
 			var switchContent = $(this).closest('.sector__tab-outer').find('.constructor-page__products');
-			// var slider= $(this).closest('.sector__tab-outer').find('.constructor-page__products .swiperProducts');
-
-			// console.log(slider)
 
 			switchContent.removeClass('current');
 			switchCurrent.addClass('current');
@@ -170,17 +174,6 @@ module.exports = class Common {
 			$(this).addClass('current-btn active');
 			$(this).siblings().removeClass('active');
 
-
-			// var mySwiper = new Swiper($(slider)[0],{
-			// 	slidesPerView:3,
-			// 	loop: true,
-			// 	spaceBetween: 20,
-			// 	navigation: {
-			// 		nextEl: '.swiperProducts .arr-next',
-			// 		prevEl: '.swiperProducts .arr-prev',
-			// 	},
-			// 	pagination: false
-			// });
 
 		})
 
@@ -285,8 +278,8 @@ module.exports = class Common {
 
 		// ACTIVE ITEM
 
-		$('.products__item').on('click', function(){
-			$(this).siblings().removeClass('active');
+		$('.constructor-page .products__item').on('click', function(){
+			$(this).closest('.sector__tab-outer').find('.products__item').removeClass('active');
 			$(this).addClass('active');
 		});
 
@@ -304,16 +297,48 @@ module.exports = class Common {
 	}
 
 	sendInputValue() {
+
 		$('.products__item').on('click', function(){
-			var input = $(this).closest('.sector__content').find('input');
-			var prodValue = $(this).data('prod');
-			var btn = $(this).closest('.sector__tab-outer').find('.btns__item.current-btn')
-			var btnValue = btn.data('hair');
+			
+			var prodValue = $(this).data('product-id');
 
-			console.log(prodValue, btnValue);
+			var parent = $(this).closest('[data-base]'); 
+			var parentVal = parent.data('base');
 
-			input.val( btnValue + " , " + prodValue);
+			var input = $('.field-constructor-'+parentVal + ' input');
+
+			var btn = $(this).closest('.sector__tab-outer').find('.btns__item.current-btn');
+			var btnValue = btn.data('button-id');
+
+			input.val( btnValue + ";" + prodValue);
+
+			// console.log(parent)
+
 		});
+
+		$('[data-field]').each(function(i){
+
+			var values = $(this).find('input').val();
+			var type = $(this).data('field');
+
+			console.log(values);
+
+			values = values.split(';');
+			if(values[0]){
+				var button =$('[data-base="'+type+'"] [data-button-id="'+values[0]+'"]');
+				button.addClass('current-btn active');
+				button.click();
+			} else {
+				$('[data-base="'+type+'"] .btns__wrap [data-button-id]').first().addClass('current-btn');
+			}
+			if(values[0] && values[1]){
+				var product = $('[data-base="'+type+'"] [data-button-id="'+values[0]+'"]')
+				.closest('.sector__tab-outer')
+				.find('[data-product-id="'+values[1]+'"]');
+				product.addClass('active');
+			}
+		});
+
 	}
 
 	scrollMedia() {

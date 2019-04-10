@@ -9,7 +9,7 @@ block content
 		+b.constructor
 			.container.constructor__container
 				+e.inner
-					+e.col-l
+					+e.col-l.sticky
 						+b.img-block
 							+b.girl-head
 								+e.head-default.girl-head__item.show
@@ -27,196 +27,195 @@ block content
 						+e.FORM.form
 							+b.sector
 								+e.title Форма волосся
-								+e.tab-outer
+								+e.tab-outer(data-base="hair_form")
 									+e.btns.btns
 										.btns__title Форма
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text1' data-hair="straight") прямі
-											.btns__item(data-switchbtn='switch-text2' data-hair="friz") кучеряві
-											.btns__item(data-switchbtn='switch-text3' data-hair="curls") локони
+											.btns__item(data-switchbtn='switch-text1' data-hair="straight" data-button-id="1") прямі
+											.btns__item(data-switchbtn='switch-text2' data-hair="friz" data-button-id="2") кучеряві
+											.btns__item(data-switchbtn='switch-text3' data-hair="curls" data-button-id="3") локони
 									+e.content
-										input(type="hidden" val='')
 										+b.products.constructor-page__products.switch-text1.current
 											+e.items-outer
 												+e.items-scroll
-													//- +e.slider.swiperProducts
-													//- 	.swiper-wrapper
-													+e.item(data-prod="1")
+													+e.item(data-product-id="11")
 														+e.item-body
 															img(src="img/lorem/hair1.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="2")
+															+e.hovered
+																+e.product-name Ботанік Терапі Шампунь для тьмяного,неслухняного і довгого волосся Арганова Олія і Екстракт Камелії 400 мл
+													+e.item(data-product-id="22")
 														+e.item-body
 															img(src="img/lorem/hair2.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="3")
+															+e.hovered
+																+e.product-name Ботанік Терапі Шампунь для тьмяного,неслухняного і довгого волосся Арганова Олія і Екстракт Камелії 400 мл
+													+e.item(data-product-id="33")
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="4")
+															+e.hovered
+																+e.product-name Ботанік Терапі Шампунь для тьмяного,неслухняного і довгого волосся Арганова Олія і Екстракт Камелії 400 мл
+													+e.item(data-product-id="54")
 														+e.item-body
 															img(src="img/lorem/hair4.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="5")
+															+e.hovered
+																+e.product-name Ботанік Терапі Шампунь для тьмяного,неслухняного і довгого волосся Арганова Олія і Екстракт Камелії 400 мл
+													+e.item(data-product-id="45")
 														+e.item-body
 															img(src="img/lorem/hair1.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="6")
+															+e.hovered
+																+e.product-name Ботанік Терапі Шампунь для тьмяного,неслухняного і довгого волосся Арганова Олія і Екстракт Камелії 400 мл
+													+e.item(data-product-id="66")
 														+e.item-body
 															img(src="img/lorem/hair5.png" alt)
-															a(href="") Інтернет-магазин
-												//- .arr.arr-next
-												//- .arr.arr-prev
+															+e.hovered
+																+e.product-name Ботанік Терапі Шампунь для тьмяного,неслухняного і довгого волосся Арганова Олія і Екстракт Камелії 400 мл
 										+b.products.constructor-page__products.switch-text2
 											+e.items-outer
 												+e.items-scroll
-													//- +e.slider.swiperProducts
-													//- 	.swiper-wrapper
-													+e.item(data-prod="22")
+													+e.item(data-product-id="22")
 														+e.item-body
 															img(src="img/lorem/hair2.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="25")
+															+e.hovered
+																+e.product-name Ботанік Терапі Шампунь для тьмяного,неслухняного і довгого волосся Арганова Олія і Екстракт Камелії 400 мл
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="25")
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="82")
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="82")
 														+e.item-body
 															img(src="img/lorem/hair4.png" alt)
-															a(href="") Інтернет-магазин
-												//- .arr.arr-next
-												//- .arr.arr-prev
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text3
 											+e.items-outer
 												+e.items-scroll
 													//- +e.slider.swiperProducts
 													//- 	.swiper-wrapper
-													+e.item(data-prod="45")
+													+e.item(data-product-id="45")
 														+e.item-body
 															img(src="img/lorem/hair5.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="2")
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="2")
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="9")
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="9")
 														+e.item-body
 															img(src="img/lorem/hair2.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="10")
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="10")
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="11")
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="11")
 														+e.item-body
 															img(src="img/lorem/hair4.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item(data-prod="12")
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="12")
 														+e.item-body
 															img(src="img/lorem/hair5.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 												//- .arr.arr-next
 												//- .arr.arr-prev
-								+e.tab-outer
+								+e.tab-outer(data-base="heir_color")
 									+e.btns.btns
 										.btns__title Колір волосся
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text4' data-color='blond') блондинка
-											.btns__item(data-switchbtn='switch-text5' data-color='red') руда
-											.btns__item(data-switchbtn='switch-text6' data-color='brown') шатенка
-											.btns__item(data-switchbtn='switch-text7' data-color='black') брюнетка
+											.btns__item(data-switchbtn='switch-text4' data-color='blond' data-button-id="3") блондинка
+											.btns__item(data-switchbtn='switch-text5' data-color='red' data-button-id="4") руда
+											.btns__item(data-switchbtn='switch-text6' data-color='brown' data-button-id="5") шатенка
+											.btns__item(data-switchbtn='switch-text7' data-color='black' data-button-id="6") брюнетка
 									+e.content
 										+b.products.constructor-page__products.switch-text4.current
 											+e.items-outer
 												+e.items-scroll
-													+e.item
+													+e.item(data-product-id="212")
 														+e.item-body
 															img(src="img/lorem/hair1.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="512")
 														+e.item-body
 															img(src="img/lorem/hair2.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="125")
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="128")
 														+e.item-body
 															img(src="img/lorem/hair4.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="127")
 														+e.item-body
 															img(src="img/lorem/hair1.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="162")
 														+e.item-body
 															img(src="img/lorem/hair5.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text5
 											+e.items-outer
 												+e.items-scroll
-													+e.item
+													+e.item(data-product-id="912")
 														+e.item-body
 															img(src="img/lorem/hair2.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="162")
 														+e.item-body
 															img(src="img/lorem/hair5.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="128")
 														+e.item-body
 															img(src="img/lorem/hair4.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text6
 											+e.items-outer
 												+e.items-scroll
-													+e.item
+													+e.item(data-product-id="812")
 														+e.item-body
 															img(src="img/lorem/hair6.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="192")
 														+e.item-body
 															img(src="img/lorem/hair5.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="192")
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="172")
 														+e.item-body
 															img(src="img/lorem/hair2.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="812")
 														+e.item-body
 															img(src="img/lorem/hair1.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="192")
 														+e.item-body
 															img(src="img/lorem/hair4.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text7
 											+e.items-outer
 												+e.items-scroll
-													+e.item
+													+e.item(data-product-id="125")
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="152")
 														+e.item-body
 															img(src="img/lorem/hair4.png" alt)
-															a(href="") Інтернет-магазин
-													+e.item
+															//- a(href="") Інтернет-магазин
+													+e.item(data-product-id="129")
 														+e.item-body
 															img(src="img/lorem/hair5.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 							+b.sector
 								+e.title Ідеальний макіяж
 								+e.tab-outer
 									+e.btns.btns
 										.btns__title Основа макіяжу
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text8') основа під макіяж + тональний крем
+											.btns__item(data-switchbtn='switch-text8') основа під макіяж + тональний крем
 											.btns__item(data-switchbtn='switch-text9') тональний крем + пудра
 											.btns__item(data-switchbtn='switch-text10') пудра
 									+e.content
@@ -226,62 +225,62 @@ block content
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text9
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text10
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/skin3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 								+e.tab-outer
 									+e.btns.btns
 										.btns__title Очі
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text11') нюдовий макіяж
+											.btns__item(data-switchbtn='switch-text11') нюдовий макіяж
 											.btns__item(data-switchbtn='switch-text12') smoky eyes
 											.btns__item(data-switchbtn='switch-text13') макіяж зі стрілами
 											.btns__item(data-switchbtn='switch-text14') макіяж cat eye
@@ -382,11 +381,11 @@ block content
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
 															a(href="") Інтернет-магазин
-								+e.tab-outer
+								//- +e.tab-outer
 									+e.btns.btns
 										.btns__title Брови
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text15') туш для брів
+											.btns__item(data-switchbtn='switch-text15') туш для брів
 											.btns__item(data-switchbtn='switch-text16') тіні для брів
 											.btns__item(data-switchbtn='switch-text17') олівець для брів
 									+e.content
@@ -396,74 +395,74 @@ block content
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows4.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text16
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows4.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text17
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 								+e.tab-outer
 									+e.btns.btns
 										.btns__title Скули
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text18') рум'яна
+											.btns__item(data-switchbtn='switch-text18') рум'яна
 											.btns__item(data-switchbtn='switch-text19') хайлайтер
 											.btns__item(data-switchbtn='switch-text20') бронзер
 									+e.content
@@ -473,74 +472,74 @@ block content
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows4.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text19
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text20
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/brows3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 								+e.tab-outer
 									+e.btns.btns
 										.btns__title Губи
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text21' data-lips='mat') матовий
+											.btns__item(data-switchbtn='switch-text21' data-lips='mat') матовий
 											.btns__item(data-switchbtn='switch-text22' data-lips='glanetc') глянець
 											.btns__item(data-switchbtn='switch-text23' data-lips='glitter') глітери
 									+e.content
@@ -550,75 +549,75 @@ block content
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text22
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 										+b.products.constructor-page__products.switch-text23
 											+e.items-outer
 												+e.items-scroll
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips2.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips3.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 													+e.item
 														+e.item-body
 															img(src="img/lorem/lips1.png" alt)
-															a(href="") Інтернет-магазин
+															//- a(href="") Інтернет-магазин
 							+b.sector
 								+e.title Твій аромат
 								+e.tab-outer
 									+e.btns.btns
 										.btns__wrap
-											.btns__item.current-btn(data-switchbtn='switch-text24' data-body='4') цитрусова свіжість
+											.btns__item(data-switchbtn='switch-text24' data-body='4') цитрусова свіжість
 											.btns__item(data-switchbtn='switch-text25' data-body='3') контраст яскравості та ніжності
 											.btns__item(data-switchbtn='switch-text26' data-body='2') зачаровуючи жіночність
 											.btns__item(data-switchbtn='switch-text27' data-body='1') квітково-деревна свіжіть
@@ -735,9 +734,14 @@ block content
 														+e.item-body
 															img(src="img/lorem/hair3.png" alt)
 															a(href="") Інтернет-магазин
+							//- .field-constructor-hair_form(data-field="hair_form")
+								input(type="hidden" value='1;11').form-control
+							.field-constructor-heir_color(data-field="heir_color")
+								input(type="hidden" value='4;162').form-control
 							+b.bottom-btns
 								+e.btn-clear Очистити
 								+e.BUTTON.btn-save Зберегти, але не відправляти
 								+e.BUTTON.btn-done Готово
+
 
 	

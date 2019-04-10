@@ -1,0 +1,10 @@
+extends ../main
+
+block variables
+	- var title = 'Дні подруг';
+	- var pageClass = 'empty-page';
+
+block content
+	+b.empty-page
+		.container
+			+e.title На жаль, на сайті перевищена кількість користувачів. Для участі в конкурсі поверніться, будь ласка, пізніше.

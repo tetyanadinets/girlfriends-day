@@ -4,12 +4,13 @@
 	top 0
 	left 0
 	right 0
-	margin-bottom 20px
+	// margin-bottom 20px
 	width 100%
 	// background rgba(255, 255, 255, .7)
 	background-color #fff
-	font-family 'Roboto Condensed', sans-serif
+	font-family 'FranklinGothic', sans-serif
 	transition all .5s ease-in
+	padding 25px 0
 	// &.fixed
 	// 	position fixed
 	// 	transition all .5s ease-in	
@@ -23,7 +24,7 @@
 		width 86%
 		height 70px
 		margin 0 auto
-		padding 0 15px
+		// padding 0 15px
 		display flex
 		align-items center
 		justify-content space-between
@@ -44,26 +45,41 @@
 			display flex
 		li
 			display inline-block
-			margin 0 15px
-			
+			margin 0 35px
+			&:last-child
+				margin-right 0
+
 .headerNav
 	.navBtn
 		text-decoration none
 		color $colorMain
 		text-transform uppercase
-		font 400 18px/1 'Quanelas', Arial, Helvetica, sans-serif
+		font 600 18px/1 'FranklinGothic', Arial, Helvetica, sans-serif
 		transition color .5s ease
 		background-color transparent
 		border none
 		cursor pointer
+		position relative
+		&:before
+			content ''
+			display block
+			position absolute
+			bottom -4px
+			left 0
+			background-color #fdf10f
+			width 100%
+			height 4px
+			transform scale(0)
+			transition transform .3s ease
 		&:hover
-			color $black
+			&:before
+				transform scale(1)
 		&.active
 			text-decoration none
-			color #f57b0a
+			color #FDF10F
 		&.menu-item-has-children
 			position relative
-			padding-right 20px
+			padding-right 32px
 			&:after
 				content ''
 				position absolute
@@ -80,8 +96,8 @@
 				-webkit-transform rotate(-45deg)
 				-ms-transform rotate(-45deg)
 				transform rotate(-45deg)
-				border-left 2px solid #f60
-				border-bottom 2px solid #f60
+				border-left 2px solid #FDF10F
+				border-bottom 2px solid #FDF10F
 				pointer-events none
 			&.active
 				&:after
@@ -94,7 +110,7 @@
 .progects
 	position absolute
 	z-index 100
-	top 70px
+	top 90px
 	left 0
 	width 100%
 	padding-bottom 30px
@@ -141,6 +157,8 @@
 			background #df98b9
 		&:nth-child(6)
 			background #ff866f
+		&:nth-child(7)
+			background #deade6
 		&:hover
 			background transparent
 			.img
@@ -163,7 +181,7 @@
 				left 0
 				width 100%
 				height 100%
-				background rgba(#000, .4)
+				background rgba(#024CBD, .4)
 		.text
 			position relative
 			z-index 2
@@ -234,7 +252,7 @@
 		left 0
 		width 100%
 		height 5px
-		background #ff8835
+		background #024cbd
 		transition .3s
 	&:before
 		top 0
@@ -247,7 +265,7 @@
 		left 0
 		width 100%
 		height 5px
-		background-color #ff8835
+		background-color #024cbd
 		transition background .3s
 		transition-delay .3s
 		
@@ -263,10 +281,9 @@
 	overflow auto
 	display none
 	&__top
-		padding 20px 15px 0
+		padding 90px 15px 0
 		font-size 16px
 		color #666666
-		background #fff
 		text-align center
 		border-bottom 1px solid $borderc
 	&__bottom
@@ -275,14 +292,19 @@
 		color #7a5166
 		background #fafafa		
 	.menu-item-has-children
+		ul
+			li
+				a
+					font-size 14px
+					margin-bottom 35px
 		span
 			position relative
 			&:after
 				content ''
 				display block
 				position absolute
-				right 5px
-				top 10px
+				right 65px
+				top 0
 				-webkit-transition -webkit-transform 0.3s
 				transition -webkit-transform 0.3s
 				-o-transition transform 0.3s
@@ -294,23 +316,30 @@
 				-webkit-transform rotate(-45deg)
 				-ms-transform rotate(-45deg)
 				transform rotate(-45deg)
-				border-left 2px solid #f60
-				border-bottom 2px solid #f60
+				border-left 2px solid #FDF10F
+				border-bottom 2px solid #FDF10F
 				pointer-events none
 			&.active
 				&:after
 					transform: rotate(135deg);
 	.sosial
+		margin 220px auto 0
+		+mw(320px)
+			margin 120px auto 0
+			
 		&__item
 			svg
-				fill #ff8835
+				fill #024cbd
 	&__logo
 		text-align center
 		margin 50px auto
 		display block
 		+mw(480px)
-			max-width 200px
-			margin 60px auto 30px
+			position absolute
+			left 15px
+			top 42px
+			max-width 220px
+			margin 0
 				
 .openNav .hidden-header
 	display block
@@ -351,10 +380,13 @@
 		a, span
 			display block
 			text-decoration none
-			font-size inherit
+			font-size 18px
+			font-weight 700
 			color inherit
-			height 40px
-			line-height 40px
+			margin-bottom 55px
+			text-align center
+			// height 40px
+			// line-height 40px
 			text-transform uppercase
 			&.mobile-mozaika
 				color $color2

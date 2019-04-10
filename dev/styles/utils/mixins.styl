@@ -19,43 +19,46 @@ mh($media = 600px, $above = false)
 btn()
 	height 49px 
 	border-radius 55px
-	background linear-gradient(180deg, #FF6D56 0%, #FF8835 100%)
+	// background linear-gradient(180deg, #FF6D56 0%, #FF8835 100%)
+	background-color #FDF10F
 	text-transform uppercase
-	font 700 14px/1 'Quanelas', Arial, Helvetica, sans-serif
-	color #fff
+	font 700 14px/1 'FranklinGothic', Arial, Helvetica, sans-serif
+	color #024CBD
 	outline none
 	transition all .5s ease
 	cursor pointer
 	border none
 	&:hover
-		background rgba(255,137,53,1)
-		background -moz-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
-		background -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,137,53,1)), color-stop(100%, rgba(214,78,60,1)))
-		background -webkit-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
-		background -o-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
-		background -ms-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
-		background linear-gradient(to bottom, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
+		// background rgba(255,137,53,1)
+		// background -moz-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
+		// background -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,137,53,1)), color-stop(100%, rgba(214,78,60,1)))
+		// background -webkit-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
+		// background -o-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
+		// background -ms-linear-gradient(top, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
+		// background linear-gradient(to bottom, rgba(255,137,53,1) 0%, rgba(214,78,60,1) 100%)
+		background-color #024CBD
+		color #FDF10F
 
 
 btn-tab()
-	box-shadow 0px 4px 15px rgba(51, 51, 51, 0.1)
 	border-radius 100px
+	border 1px solid #D2D2D2
 	max-width 200px
 	width 100%
 	height 50px
-	color #B0B0B0
+	color #024CBD
 	transition all .3s ease
 	background #fff
-	border none
 	cursor pointer
+	font-size 14px
+	font-weight 700
 	&:hover
-		background linear-gradient(180deg, #FF6D56 0%, #FF8835 100%)
-		box-shadow 0px 6px 20px rgba(51, 51, 51, 0.15)
-		color #fff
+		border-color #FDF10F
+		background-color #FDF10F
 
 		
 box-style()
-	border 1px solid #FF8835
+	border 1px solid #024CBD
 	border-radius 10px
 	transition all .3s ease
 	// &:hover

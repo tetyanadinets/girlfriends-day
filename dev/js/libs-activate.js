@@ -49,11 +49,11 @@ function libsActivate() {
 	})();
 
 	// sticky plugin
-	// (function(){
-	// 	$(".sticky").stick_in_parent({
-	// 		offset_top: 130,
-	// 	});
-	// })();
+	(function(){
+		$(".sticky").stick_in_parent({
+			offset_top: 130,
+		});
+	})();
 
 }
 

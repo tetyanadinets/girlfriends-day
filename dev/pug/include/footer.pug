@@ -1,4 +1,5 @@
 mixin footer(data)
+	button.go-top
 	+b.FOOTER.footer
 		.container
 			+e.inner
@@ -8,27 +9,23 @@ mixin footer(data)
 					+e.info Без вихідних 8:00 - 21:00
 					+e.info Безкоштовні дзвінки зі стаціонарних та мобільних телефонів Украіни
 				+e.col
-					+e.title ПИШІТЬ НАМ
-					+e.A(href='mailto:challenge@eva.ua').info.footer__info_link challenge@eva.ua
+					+e.title ПРИЄДНУЙСЯ
+					+e.UL.sosial.sosial
+						a(href='').sosial__item.sosial__item_fb
+							include ../../static/img/svg/icons/fb.svg
+						a(href='').sosial__item.sosial__item_youtube
+							include ../../static/img/svg/icons/youtube.svg
+						a(href='').sosial__item.sosial__item_viber
+							include ../../static/img/svg/icons/viber.svg
+						a(href='').sosial__item.sosial__item_insta
+							include ../../static/img/svg/icons/insta.svg
 				+e.col
 					+e.title АДРЕСА
 					+e.info 49055,
 					+e.info Дніпропетровська обл., м. Дніпро, проспект О. Поля, буд., 104 А
 			+e.inner.footer__inner_bot
 				+e.col
-					+e.info © Copyright by EVA 2018.
-				+e.col
-					+e.UL.sosial.sosial
-						a(href='').sosial__item.sosial__item_fb
-							include ../../static/img/svg/icons/fb.svg
-						a(href='').sosial__item.sosial__item_youtube
-							include ../../static/img/svg/icons/youtube.svg
-						a(href='').sosial__item.sosial__item_twit
-							include ../../static/img/svg/icons/twit.svg
-						a(href='').sosial__item.sosial__item_viber
-							include ../../static/img/svg/icons/viber.svg
-						a(href='').sosial__item.sosial__item_insta
-							include ../../static/img/svg/icons/insta.svg
+					+e.info © Copyright by EVA 2019.
 				+e.col 
 					+e.A(href='https://sun.agency/').info.footer__info_link Зроблено по дружбі Cонцем
 						span ☼​

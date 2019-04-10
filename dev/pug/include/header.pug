@@ -7,32 +7,32 @@ mixin header(data)
 				+e.NAV.nav.headerNav
 					ul
 						li: a.navBtn.scroll(href="#rules") як виграти
-						li: a.navBtn.scroll(href="#prisec") Призи
+						li: a.navBtn.scroll(href="#prisec") Подарунки
 						li: a.navBtn.scroll(href="#partners") Партнери
 						li: button.navBtn.menu-item-has-children(data-projects-desc) Проекти
 
 			+b.progects.navPopup#progectsPopup
 				.container
 					+e.wrap
-						+e.A.item(href="")
-							.img(style="background-image:url(img/lorem/article1.jpg)")
+						+e.A.item(href="https://sport.eva.ua/")
+							.img(style="background-image:url(img/lorem/challenge.png)")
 							span.text EVA Woman Challenge
-						+e.A.item(href="")
-							.img(style="background-image:url(img/lorem/article2.jpg)")
+						+e.A.item(href="https://mozayka.com.ua/")
+							.img(style="background-image:url(img/lorem/mozaika.png)")
 							span.text Програма лояльності<br> "Мозаїка"
-						+e.A.item(href="")
-							.img(style="background-image:url(img/lorem/article3.jpg)")
+						+e.A.item(href="https://academy.eva.ua/")
+							.img(style="background-image:url(img/lorem/blogger_course.png)")
 							span.text  EVA Academy
-						+e.A.item(href="")
-							.img(style="background-image:url(img/lorem/article4.jpg)")
+						+e.A.item(href="https://evaportal.com.ua/")
+							.img(style="background-image:url(img/lorem/eva_blog.png)")
 							img.decor(src="img/decor.png", alt="")
 							span.text Блог Beauty & Care
-						+e.A.item(href="")
-							.img(style="background-image:url(img/lorem/article5.jpg)")
-							span.text Благотворительность
-						+e.A.item(href="")
-							.img(style="background-image:url(img/lorem/article6.jpg)")
-							span.text  Мама года
+						+e.A.item(href="https://charity.mozayka.com.ua/")
+							.img(style="background-image:url(img/lorem/charity.png)")
+							span.text Благодійність
+						+e.A.item(href="https://evahappyma.com.ua/")
+							.img(style="background-image:url(img/lorem/eva_clab.png)")
+							span.text  Клуб Щаслива мама
 					+e.A.logo(href=""): img(src="img/svg/logo.svg", alt="eva")
 
 			.hamburger#hamburger
@@ -57,15 +57,14 @@ mixin header(data)
 					+e.NAV.nav
 						ul
 							li.menu-item-has-children
-								span(data-projects-mob) Проекти EVA
+								span(data-projects-mob) Проекти
 								ul
-									li: a(href="") EVA Woman Challenge
-									li: a(href="") Програма лояльності  "Мозаїка"
-									li: a(href="") EVA Academy
-									li: a(href="") Блог Beauty & Care
-									li: a(href="") Благодійність
-									li: a(href="") Мама року
-							li: a(href="") EVA.UA
+									li: a(href="https://sport.eva.ua/") EVA Woman Challenge
+									li: a(href="https://mozayka.com.ua/") Програма лояльності  "Мозаїка"
+									li: a(href="https://academy.eva.ua/") EVA Academy
+									li: a(href="https://evaportal.com.ua/") Блог Beauty & Care
+									li: a(href="https://charity.mozayka.com.ua/") Благодійність
+									li: a(href="https://evahappyma.com.ua/") Клуб Щаслива мама
 				
 
 					+e.UL.sosial.sosial
@@ -73,8 +72,6 @@ mixin header(data)
 							include ../../static/img/svg/icons/fb.svg
 						a(href='').sosial__item.sosial__item_youtube
 							include ../../static/img/svg/icons/youtube.svg
-						a(href='').sosial__item.sosial__item_twit
-							include ../../static/img/svg/icons/twit.svg
 						a(href='').sosial__item.sosial__item_viber
 							include ../../static/img/svg/icons/viber.svg
 						a(href='').sosial__item.sosial__item_insta
